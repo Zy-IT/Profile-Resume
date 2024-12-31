@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #212121;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.Navbar-Logo {
+    display: flex;
+    align-items: center;
+}
+
+.Navbar-Title {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Navbar-Title:hover {
+    color: #f44336;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Navbar-List {
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.Navbar-Link-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    display: inline-block;
+    padding: 4px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.Navbar-Link-btn::before,
+.Navbar-Link-btn::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    transition: width 0.5s ease;
+    left: 0;
+}
+
+.Navbar-Link-btn::before {
+    top: 0;
+    margin-left: auto;
+    right: 0;
+}
+
+.Navbar-Link-btn::after {
+    bottom: 0;
+    left: 0;
+}
+
+.Navbar-Link-btn:hover {
+    color: white;
+}
+
+.Navbar-Link-btn:hover::before,
+.Navbar-Link-btn:hover::after {
+    width: 100%;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+    .Navbar-container {
+        padding: 0 20px;
+    }
+
+    .Navbar-List {
+        gap: 20px;
+    }
+
+    .Navbar-Link-btn {
+        font-size: 16px;
+    }
+}
