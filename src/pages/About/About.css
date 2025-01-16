@@ -1,0 +1,44 @@
+.About-Screen {
+    height: 100vh;
+}
+
+.About-Header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.About-Header-Content {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+
+.About-Header-Content h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color : white;
+}
+
+.About-Header-Content p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color:  white;
+}
+
+.About-Me {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.About-Me-Content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+

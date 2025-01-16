@@ -40,6 +40,7 @@ function Home() {
         <div className="Home-Screen">
             <Navbar />
             <div className="Home-Container">
+                {/* 1st Paragraph */}
                 <div className="Home-Title">
                     <div className="Home-1-Title-Content">
                         <h1>
@@ -52,7 +53,7 @@ function Home() {
                         </h1>
                     </div>
                 </div>
-
+                {/* 2nd Paragraph */}
                 <div className="Home-Center">
                     <div className="Center-1-Content">
                         <h1>
@@ -66,6 +67,7 @@ function Home() {
                     </div>
                 </div>
 
+                {/* My Whole Name */}
                 <div className="Home-Name">
                     <div className="Home-Content-1stName">
                         <h1>Zyril</h1>
@@ -77,6 +79,7 @@ function Home() {
                         <h1>Paraoan</h1>
                     </div>
                 </div>
+
                 {/* From Uiverse.io by Lakshay-art || Animated Search Input */}
                 <div className="grid"></div>
                 <div id="poda">

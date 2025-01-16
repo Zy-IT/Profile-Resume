@@ -134,7 +134,7 @@
           font-weight: 600;
           color: #FF5722;
           opacity: 0;
-          transform: translateX(-100vw);
+          transform: translateX(-100px);
           animation: slideFromLeft 1s ease forwards;
           animation-delay: 6s;
         }
@@ -142,7 +142,7 @@
         @keyframes slideFromLeft {
           from {
             opacity: 0;
-            transform: translateX(-100vw);
+            transform: translateX(-100px);
           }
 
           to {
@@ -156,7 +156,7 @@
           height: 250px;
           color: #FF5722;
           opacity: 0;
-          transform: translateX(100vh);
+          transform: translateX(100px);
           animation: slideFromBottom 1s ease forwards;
           animation-delay: 6.5s;
         }
@@ -164,7 +164,7 @@
         @keyframes slideFromBottom {
           from {
             opacity: 0;
-            transform: translateY(100vh);
+            transform: translateY(100px);
           }
 
           to {
@@ -178,7 +178,7 @@
           height: 250px;
           color: #FF5722;
           opacity: 0;
-          transform: translateX(100vw);
+          transform: translateX(100px);
           animation: slideFromRight 1s ease forwards;
           animation-delay: 7s;
         }
@@ -186,7 +186,7 @@
         @keyframes slideFromRight {
           from {
             opacity: 0;
-            transform: translateX(100vw);
+            transform: translateX(100px);
           }
 
           to {
@@ -198,7 +198,7 @@
         .Home-Content-1stName h1,
         .Home-Content-2ndName h1,
         .Home-Content-3rdName h1 {
-          background: linear-gradient(135deg, #FF5722, #FFC107);
+          background: linear-gradient(135deg, #f44336, #ff7043);
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -318,17 +318,7 @@
         }
 
         #pink-mask {
-          pointer-events: none;
-          width: 30px;
-          height: 20px;
-          position: absolute;
-          background: #cf30aa;
-          top: 10px;
-          left: 5px;
-          filter: blur(20px);
-          opacity: 0.8;
-          animation: leftright 4s ease-in infinite;
-          transition: all 2s;
+          background: #f44336;
         }
 
         #main:hover>#pink-mask {
@@ -356,10 +346,10 @@
           background-position: 0 0;
           filter: brightness(1.4);
           background-image: conic-gradient(rgba(0, 0, 0, 0) 0%,
-              #a099d8,
+              #f44336,
               rgba(0, 0, 0, 0) 8%,
               rgba(0, 0, 0, 0) 50%,
-              #dfa2da,
+              #ff7043,
               rgba(0, 0, 0, 0) 58%);
           animation: rotate 4s linear infinite;
           transition: all 2s;
@@ -385,10 +375,10 @@
           background-repeat: no-repeat;
           background-position: 0 0;
           background-image: conic-gradient(#1c191c,
-              #402fb5 5%,
+              #f44336 5%,
               #1c191c 14%,
               #1c191c 50%,
-              #cf30aa 60%,
+              #ff7043 60%,
               #1c191c 64%);
           animation: rotate 4s 0.1s linear infinite;
           transition: all 2s;
@@ -412,10 +402,10 @@
           background-repeat: no-repeat;
           background-position: 0 0;
           background-image: conic-gradient(rgba(0, 0, 0, 0),
-              #18116a,
+              #d32f2f,
               rgba(0, 0, 0, 0) 10%,
               rgba(0, 0, 0, 0) 50%,
-              #6e1b60,
+              #ff7043,
               rgba(0, 0, 0, 0) 60%);
           transition: all 2s;
         }
@@ -477,14 +467,15 @@
           background-repeat: no-repeat;
           background-position: 0 0;
           background-image: conic-gradient(#000,
-              #402fb5 5%,
+              #f44336 5%,
               #000 38%,
               #000 50%,
-              #cf30aa 60%,
+              #ff7043 60%,
               #000 87%);
           animation: rotate 4s 0.3s linear infinite;
           transition: all 2s;
         }
+
 
         @keyframes rotate {
           100% {
