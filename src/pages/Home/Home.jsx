@@ -8,6 +8,7 @@ function Home() {
 
     const [showIntro, setShowIntro] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
+    const [startShine, setStartShine] = useState(false);
 
     useEffect(() => {
 
@@ -23,6 +24,12 @@ function Home() {
             clearTimeout(fadeTimer);
             clearTimeout(switchTimer);
         };
+    }, []);
+
+    useEffect(() => {
+        // Start shine effect after all entrance animations complete
+        const shineDelay = 8000; // 7s (last animation) + 1s (animation duration)
+        setTimeout(() => setStartShine(true), shineDelay);
     }, []);
 
     if (showIntro) {
@@ -72,17 +79,16 @@ function Home() {
 
                     {/* My Whole Name */}
                     <div className="Home-Name">
-                        <div className="Home-Content-1stName">
-                            <h1>Zyril</h1>
+                        <div className={`Home-Content-1stName ${startShine ? 'shine' : ''}`}>
+                            <h1 data-text="Zyril">Zyril</h1>
                         </div>
-                        <div className="Home-Content-2ndName">
-                            <h1>A.</h1>
+                        <div className={`Home-Content-2ndName ${startShine ? 'shine' : ''}`}>
+                            <h1 data-text="A.">A.</h1>
                         </div>
-                        <div className="Home-Content-3rdName">
-                            <h1>Paraoan</h1>
+                        <div className={`Home-Content-3rdName ${startShine ? 'shine' : ''}`}>
+                            <h1 data-text="Paraoan">Paraoan</h1>
                         </div>
                     </div>
-
                     {/* From Uiverse.io by Lakshay-art || Animated Search Input */}
                     <div className="grid"></div>
                     <div id="poda">
