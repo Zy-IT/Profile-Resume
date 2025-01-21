@@ -8,7 +8,7 @@ function Home() {
 
     const [showIntro, setShowIntro] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
-    const [startShine, setStartShine] = useState(false);
+    const [currentShine, setCurrentShine] = useState(-1);
 
     useEffect(() => {
 
@@ -27,9 +27,22 @@ function Home() {
     }, []);
 
     useEffect(() => {
-        // Start shine effect after all entrance animations complete
-        const shineDelay = 8000; // 7s (last animation) + 1s (animation duration)
-        setTimeout(() => setStartShine(true), shineDelay);
+        const shineDelay = 8000;
+        const shineInterval = 2000;
+
+        const timer = setTimeout(() => {
+            let index = 0;
+            setCurrentShine(index);
+
+            const interval = setInterval(() => {
+                index = (index + 1) % 3;
+                setCurrentShine(index);
+            }, shineInterval);
+
+            return () => clearInterval(interval);
+        }, shineDelay);
+
+        return () => clearTimeout(timer);
     }, []);
 
     if (showIntro) {
@@ -79,16 +92,17 @@ function Home() {
 
                     {/* My Whole Name */}
                     <div className="Home-Name">
-                        <div className={`Home-Content-1stName ${startShine ? 'shine' : ''}`}>
+                        <div className={`Home-Content-1stName ${currentShine === 0 ? "shine" : ""}`}>
                             <h1 data-text="Zyril">Zyril</h1>
                         </div>
-                        <div className={`Home-Content-2ndName ${startShine ? 'shine' : ''}`}>
+                        <div className={`Home-Content-2ndName ${currentShine === 1 ? "shine" : ""}`}>
                             <h1 data-text="A.">A.</h1>
                         </div>
-                        <div className={`Home-Content-3rdName ${startShine ? 'shine' : ''}`}>
+                        <div className={`Home-Content-3rdName ${currentShine === 2 ? "shine" : ""}`}>
                             <h1 data-text="Paraoan">Paraoan</h1>
                         </div>
                     </div>
+
                     {/* From Uiverse.io by Lakshay-art || Animated Search Input */}
                     <div className="grid"></div>
                     <div id="poda">
