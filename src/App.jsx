@@ -1,5 +1,4 @@
 //Author:: Zyril A. Paraoan
-import React from 'react';
 import ScrollToTop from './Components/ScrolltoTop';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';

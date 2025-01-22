@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import TypeWriter from "../../Components/TypeWriting/TypeWriting";
+import { useHuggingFaceChat } from "../../Components/HuggingFaceChat/HuggingFaceChat";
 import './Home.css';
 
 
 function Home() {
-
+    const { question, setQuestion, answer, loading, handleQuestion } = useHuggingFaceChat();
     const [showIntro, setShowIntro] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
     const [currentShine, setCurrentShine] = useState(-1);
@@ -103,40 +104,55 @@ function Home() {
                         </div>
                     </div>
 
-                    {/* From Uiverse.io by Lakshay-art || Animated Search Input */}
-                    <div className="grid"></div>
-                    <div id="poda">
-                        <div className="glow"></div>
-                        <div className="darkBorderBg"></div>
-                        <div className="white"></div>
-                        <div className="border"></div>
-                        <div id="main">
-                            <div id="search-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" height="24" fill="none" className="feather feather-search">
-                                    <circle stroke="url(#search)" r="8" cy="11" cx="11"></circle>
-                                    <line stroke="url(#searchl)" y2="16.65" y1="22" x2="16.65" x1="22"></line>
-                                    <defs>
-                                        <linearGradient gradientTransform="rotate(50)" id="search">
-                                            <stop stopColor="#f8e7f8" offset="0%"></stop>
-                                            <stop stopColor="#b6a9b7" offset="50%"></stop>
-                                        </linearGradient>
-                                        <linearGradient id="searchl">
-                                            <stop stopColor="#b6a9b7" offset="0%"></stop>
-                                            <stop stopColor="#837484" offset="50%"></stop>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
+                    {/* AI Assistance */}
+                    <div className="AI-Assistant">
+                        <div className="container_chat_bot">
+                            <div className="container-chat-options">
+                                <div className="chat">
+                                    <div className="chat-bot">
+                                        <textarea
+                                            id="chat_bot"
+                                            name="chat_bot"
+                                            placeholder="Need Something? Ask Me...✦˚"
+                                            value={question}
+                                            onChange={(e) => setQuestion(e.target.value)}
+                                        ></textarea>
+                                    </div>
+                                    <div className="options">
+                                        <div className="btns-add">
+                                            {/* Add your optional buttons here */}
+                                        </div>
+                                        <button
+                                            className="btn-submit"
+                                            onClick={handleQuestion}
+                                            disabled={loading}
+                                        >
+                                            {loading ? 'Loading...' : (
+                                                <i>
+                                                    <svg viewBox="0 0 512 512">
+                                                        <path
+                                                            fill="currentColor"
+                                                            d="M473 39.05a24 24 0 0 0-25.5-5.46L47.47 185h-.08a24 24 0 0 0 1 45.16l.41.13l137.3 58.63a16 16 0 0 0 15.54-3.59L422 80a7.07 7.07 0 0 1 10 10L226.66 310.26a16 16 0 0 0-3.59 15.54l58.65 137.38c.06.2.12.38.19.57c3.2 9.27 11.3 15.81 21.09 16.25h1a24.63 24.63 0 0 0 23-15.46L478.39 64.62A24 24 0 0 0 473 39.05"
+                                                        ></path>
+                                                    </svg>
+                                                </i>
+                                            )}
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <input placeholder="Tell me what you want to know about Mr. Paraoan" type="text" name="text" className="input" />
+                            {answer && (
+                                <div className="chat-response">
+                                    <p><strong>Response:</strong> {answer}</p>
+                                </div>
+                            )}
                         </div>
                     </div>
-                    <div>
-                    </div>
                 </div>
-            </section>
+            </section >
 
 
-        </div>
+        </div >
     );
 }
 

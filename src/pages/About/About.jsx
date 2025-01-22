@@ -14,7 +14,7 @@ function About() {
                     <div className='About-Me-Content'>
                         <div className='About-Me-Content-1'>
                             <h2>WHO AM I?</h2>
-                            <h1>Hi, I'm Zyril</h1>
+                            <h1>Hi, I am Zyril</h1>
                             <p>
                                 Innovative IT professional with a strong foundation in Backend Development and Database Management.
                                 A graduate of the University of Saint Louis Tuguegarao, I thrive on solving complex challenges and
@@ -22,13 +22,13 @@ function About() {
                                 with precision and creativity.
                             </p>
                             <a href={Resume} target="_blank" rel="noreferrer">
-                                <button class="About-button">
+                                <button className="About-button">
                                     My Resume
-                                    <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                                    <svg fill="currentColor" viewBox="0 0 24 24" className="icon">
                                         <path
-                                            clip-rule="evenodd"
+                                            clipRule="evenodd"
                                             d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                                            fill-rule="evenodd"
+                                            fillRule="evenodd"
                                         ></path>
                                     </svg>
                                 </button>
