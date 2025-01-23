@@ -3,7 +3,8 @@ import stringSimilarity from "string-similarity";
 import huggingFaceData from "./huggingFace.json";
 
 const API_URL = 'https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill';
-const API_KEY = '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';
+// eslint-disable-next-line no-undef
+const API_KEY = process.env.API_KEY;
 
 export const fetchHuggingFaceResponse = async (question) => {
 
