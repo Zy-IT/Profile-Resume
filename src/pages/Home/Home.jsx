@@ -6,11 +6,16 @@ import './Home.css';
 
 
 function Home() {
-    const { question, setQuestion, answer, loading, handleQuestion } = useHuggingFaceChat();
+    const { question, setQuestion, answer, displayedAnswer, loading, handleQuestion } = useHuggingFaceChat();
     const [showIntro, setShowIntro] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
     const [currentShine, setCurrentShine] = useState(-1);
 
+    const handleTagClick = (tagText) => {
+        setQuestion(tagText);
+        handleQuestion(); // Trigger the question handler
+    };
+    
     useEffect(() => {
 
         const fadeTimer = setTimeout(() => {
@@ -109,18 +114,27 @@ function Home() {
                         <div className="container_chat_bot">
                             <div className="container-chat-options">
                                 <div className="chat">
+                                    {/* Chat Input Section */}
                                     <div className="chat-bot">
                                         <textarea
                                             id="chat_bot"
                                             name="chat_bot"
-                                            placeholder="Need Something? Ask Me...✦˚"
+                                            placeholder="Hello I am Chippie, Mr. Zy's AI Assistant...✦˚"
                                             value={question}
                                             onChange={(e) => setQuestion(e.target.value)}
                                         ></textarea>
                                     </div>
+                                    {/* Display AI Response */}
+                                    {answer && (
+                                        <div className="chat-response">
+                                            <p><strong>Chippie:</strong> {displayedAnswer || (loading && "Typing...")}</p>
+                                        </div>
+                                    )}
+
+                                    {/* Options Section */}
                                     <div className="options">
                                         <div className="btns-add">
-                                            {/* Add your optional buttons here */}
+                                            {/* Add optional buttons here */}
                                         </div>
                                         <button
                                             className="btn-submit"
@@ -141,13 +155,15 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-                            {answer && (
-                                <div className="chat-response">
-                                    <p><strong>Response:</strong> {answer}</p>
-                                </div>
-                            )}
+                            <div className="tags">
+                                <span onClick={() => handleTagClick("Create An Image")}>Create An Image</span>
+                                <span onClick={() => handleTagClick("Analyse Data")}>Analyse Data</span>
+                                <span onClick={() => handleTagClick("More")}>More</span>
+                            </div>
                         </div>
                     </div>
+
+
                 </div>
             </section >
 
