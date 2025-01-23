@@ -1,5 +1,5 @@
 {
-    "can you tell me about youre developer?": "/About",
+    "Ok then, then introduce me to youre developer or show me something about him": "/About",
     "show me your projects": "/projects",
     "navigate to contact": "/contact"
 }

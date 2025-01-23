@@ -11,11 +11,13 @@ function Home() {
     const [fadeOut, setFadeOut] = useState(false);
     const [currentShine, setCurrentShine] = useState(-1);
 
+
+
     const handleTagClick = (tagText) => {
         setQuestion(tagText);
         handleQuestion(); // Trigger the question handler
     };
-    
+
     useEffect(() => {
 
         const fadeTimer = setTimeout(() => {
@@ -119,15 +121,18 @@ function Home() {
                                         <textarea
                                             id="chat_bot"
                                             name="chat_bot"
-                                            placeholder="Hello I am Chippie, Mr. Zy's AI Assistant...✦˚"
+                                            placeholder= "Hello I am Chippie, Mr. Zy's Personal Static AI Assistant...✦˚"
                                             value={question}
                                             onChange={(e) => setQuestion(e.target.value)}
                                         ></textarea>
                                     </div>
                                     {/* Display AI Response */}
-                                    {answer && (
+                                    {(answer || displayedAnswer) && (
                                         <div className="chat-response">
-                                            <p><strong>Chippie:</strong> {displayedAnswer || (loading && "Typing...")}</p>
+                                            <p>
+                                                <strong>Chippie:</strong>{' '}
+                                                {loading ? "Typing..." : displayedAnswer}
+                                            </p>
                                         </div>
                                     )}
 
@@ -156,17 +161,19 @@ function Home() {
                                 </div>
                             </div>
                             <div className="tags">
-                                <span onClick={() => handleTagClick("Create An Image")}>Create An Image</span>
-                                <span onClick={() => handleTagClick("Analyse Data")}>Analyse Data</span>
+                                <span onClick={() => handleTagClick("Tell me something about Mr. Zy")}>
+                                    Tell Me Something about Mr. Zy
+                                </span>
+                                <span onClick={() => handleTagClick("What are his skills")}>
+                                    What are his skills?
+                                </span>
                                 <span onClick={() => handleTagClick("More")}>More</span>
                             </div>
                         </div>
                     </div>
 
-
                 </div>
             </section >
-
 
         </div >
     );
