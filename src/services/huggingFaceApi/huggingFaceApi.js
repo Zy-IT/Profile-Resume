@@ -2,8 +2,9 @@ import axios from "axios";
 import stringSimilarity from "string-similarity";
 import huggingFaceData from "./huggingFace.json";
 
-const API_URL = 'https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill';
-// eslint-disable-next-line no-undef
+// const API_URL = 'https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill';
+// const API_KEY = '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';
+// // eslint-disable-next-line no-undef
 const API_KEY = process.env.API_KEY; //Need the APIKEY: just go to huggingface to chech the token 
 
 export const fetchHuggingFaceResponse = async (question) => {

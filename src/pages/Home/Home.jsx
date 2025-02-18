@@ -121,7 +121,7 @@ function Home() {
                                         <textarea
                                             id="chat_bot"
                                             name="chat_bot"
-                                            placeholder= "Hello I am Chippie, Mr. Zy's Personal Static AI Assistant...✦˚"
+                                            placeholder= "Hello I am Chippie, Mr. Zy's Personal AI Assistant...✦"
                                             value={question}
                                             onChange={(e) => setQuestion(e.target.value)}
                                         ></textarea>
