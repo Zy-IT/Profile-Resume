@@ -1,22 +1,25 @@
 .About-Screen {
     height: 100vh;
     position: relative;
-    background-image:
-        linear-gradient(to right, rgba(15, 15, 16, 0.3) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(15, 15, 16, 0.3) 1px, transparent 1px);
-    background-size: 2rem 2rem;
-    background-position: center center;
-    background-color: #212121;
-    animation: gridwave 8s ease-in-out infinite;
+}
+
+.BackgroundBeams {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 
 .About-Me-Container {
-    position: absolute;
+    position: relative;
     left: 50%;
-    top: 50%;
+
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1200px;
+    max-height: 100%;
     padding: 0 2rem;
 }
 
@@ -27,7 +30,8 @@
     align-items: center;
     justify-content: center;
     color: white;
-    gap: 2rem;
+    height: 600px;
+    padding-left: 2rem;
 }
 
 /*---About Me Left Side---*/
@@ -176,6 +180,167 @@
 .aboutMe-container .glass svg {
     font-size: 2.5em;
     fill: #fff;
+}
+
+/* -----Infinite Marquee of Skills ------*/
+.About-Me-Skills-section {
+    position: relative;
+    margin-top: 50px;
+    height: 1000px';
+
+}
+
+.About-Me-Skills-Title {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #64ffda;
+    padding-top: 20px;
+}
+
+.About-Me-Skills-Title h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.Aboute-Me-Title-Sub {
+    color: ;
+    font-size: 3.5rem;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.About-Me-Skills {
+    width: 100%;
+    padding: 40px;
+
+}
+
+.skills-marquee-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+    object-position: center;
+}
+
+.skills-marquee {
+    width: 100%;
+    position: relative;
+}
+
+.skills-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+}
+
+.skill-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    padding: 15px;
+    min-width: 115px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+/* Icon specific colors */
+.html-icon i {
+    color: #E44D26;
+}
+
+.css-icon i {
+    color: #264DE4;
+}
+
+.js-icon i {
+    color: #F7DF1E;
+}
+
+.java-icon i {
+    color: #007396;
+}
+
+.springboot-icon i {
+    color: #05e867;
+}
+
+.db-icon i {
+    color: #336791;
+}
+
+.api-icon i {
+    color: #FF6C37;
+}
+
+.react-icon i {
+    color: #61DAFB;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause animation on hover */
+.skills-marquee-container:hover .skills-track {
+    animation-play-state: paused;
+}
+
+
+/* Work Experience */
+
+
+
+
+
+/* Achievements */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-card {
+        margin: 0 10px;
+        padding: 10px;
+        min-width: 80px;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
 }
 
 

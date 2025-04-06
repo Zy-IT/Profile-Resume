@@ -1,13 +1,16 @@
 import Navbar from '../../Components/Navbar/Navbar';
 import Resume from '../../../public/pdfs/Curriculum Vitae_Paraoan.pdf';
+import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
+import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
+import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import './About.css';
 
 
 function About() {
 
-
     return (
         <div className="About-Screen">
+            <BackgroundBeams />
             <Navbar />
             <div className="About-Container">
                 <section className='About-Me-Container'>
@@ -17,8 +20,8 @@ function About() {
                             <h1>Hi, I am Zyril</h1>
                             <p>
                                 Innovative IT professional with a strong foundation in Backend Development and Database Management.
-                                A graduate of the University of Saint Louis Tuguegarao, I thrive on solving complex challenges and
-                                delivering impactful digital solutions. Skilled in bridging logic and design, I bring ideas to life
+                                A graduate of the University of Saint Louis Tuguegarao, I thrive on solving problems and
+                                delivering impactful digital solutions. Skilled in Analyzing and creating solutions, I bring ideas to life
                                 with precision and creativity.
                             </p>
                             <a href={Resume} target="_blank" rel="noreferrer">
@@ -34,6 +37,7 @@ function About() {
                                 </button>
                             </a>
                         </div>
+
                         <div className='About-Me-Content-2'>
                             <div className="aboutMe-container">
                                 {/* Top Left  Github */}
@@ -64,21 +68,7 @@ function About() {
                                     </svg>
                                 </a>
 
-                                {/* Top Right Discord*/}
-                                <a
-                                    href=""
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    data-text="Discord"
-                                    style={{ '--r': 5, '--order': 1, '--row': 0, '--col': 2 }}
-                                    className="glass"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" height="1em">
-                                        <path d="M107.48,8A105,105,0,0,0,82.43,0a72.58,72.58,0,0,0-2.56,5.29A99.12,99.12,0,0,0,47.27,5.28a72.19,72.19,0,0,0-2.62-5.29A105.17,105.17,0,0,0,19.46,8C3.77,33.74-1.61,58.4.56,82.79a106.43,106.43,0,0,0,32.06,11.57,77.7,77.7,0,0,0,6.78-11.13,66.74,66.74,0,0,1-10.7-5.06c.9-.67,1.79-1.36,2.65-2.07a77.5,77.5,0,0,0,61.5,0c.88.72,1.77,1.41,2.66,2.07a66.74,66.74,0,0,1-10.7,5.06,77.7,77.7,0,0,0,6.78,11.13,106.43,106.43,0,0,0,32.06-11.57C128.75,58.4,123.37,33.74,107.48,8ZM47.87,65.57c-8.74,0-15.89-8-15.89-17.83s7.05-17.83,15.89-17.83,15.89,8,15.89,17.83S56.61,65.57,47.87,65.57ZM79.26,65.57c-8.74,0-15.89-8-15.89-17.83s7.05-17.83,15.89-17.83S95.15,38,95.15,48.75,88,65.57,79.26,65.57Z" />
-                                    </svg>
-
-                                </a>
-
+                                {/* Bottom Left Email */}
                                 <a
                                     href="https://mail.google.com/mail/?view=cm&fs=1&to=zyrilparaoann@gmail.com&su=Subject%20Here&body=Hello%20there!%0A%0AWrite%20your%20message%20here."
                                     target="_blank"
@@ -111,26 +101,169 @@ function About() {
                                         <path d="M279.14 288l14.22-92.66h-88.91V127.41c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.5 0 225.36 0c-73.44 0-121.15 44.38-121.15 124.72v70.62H22.89V288h81.32v224h100.17V288z" />
                                     </svg>
                                 </a>
+                            </div>
+                        </div>
+                    </div>
 
-                                {/* Bottom Right Contacts */}
-                                <a
-                                    href=""
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    data-text="Contact"
-                                    style={{ '--r': 60, '--order': 5, '--row': 1, '--col': 2 }}
-                                    className="glass"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        height="1.5em"
-                                        fill="currentColor"
-                                    >
-                                        <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A16 16 0 0 1 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.05l-2.2 2.2z" />
-                                    </svg>
-                                </a>
+                    <section className='About-Me-Skills-section'>
+                        <div className='About-Me-Skills-Title'>
+                            <h1>Tech</h1>
+                            <h1 className='Aboute-Me-Title-Sub'>Stacks</h1>
+                        </div>
+                        <div className="About-Me-Skills">
 
+                            <div className="skills-marquee-container">
+                                <div className="skills-marquee">
+                                    <div className="skills-track">
+                                        {/* First set of items */}
+                                        <div className="skill-card">
+                                            <div className="skill-icon html-icon">
+                                                <i className="fab fa-html5"><SiHtml5 /></i>
+                                            </div>
+                                            <div className="skill-name">HTML</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon css-icon">
+                                                <i className="fab fa-css3-alt"><FaCss3 /></i>
+                                            </div>
+                                            <div className="skill-name">CSS</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon js-icon">
+                                                <i className="fab fa-js"><SiJavascript /></i>
+                                            </div>
+                                            <div className="skill-name">JavaScript</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon java-icon">
+                                                <i className="fab fa-java"><FaJava /></i>
+                                            </div>
+                                            <div className="skill-name">Java</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon springboot-icon">
+                                                <i className="fab fa-java"><SiSpringboot /></i>
+                                            </div>
+                                            <div className="skill-name">Springboot</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon db-icon">
+                                                <i className="fas fa-database"><SiPostgresql /></i>
+                                            </div>
+                                            <div className="skill-name">PostgreSQL</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon db-icon">
+                                                <i className="fas fa-database"><SiMysql /></i>
+                                            </div>
+                                            <div className="skill-name">MySQL</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon api-icon">
+                                                <i className="fas fa-plug"><SiPostman /></i>
+                                            </div>
+                                            <div className="skill-name">Postman</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon react-icon">
+                                                <i className="fab fa-react"><FaReact /></i>
+                                            </div>
+                                            <div className="skill-name">React</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon Git-icon">
+                                                <i className="fab fa-react"><FaGitAlt /></i>
+                                            </div>
+                                            <div className="skill-name">Git</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon Github-icon">
+                                                <i className="fab fa-react"><FaGithub /></i>
+                                            </div>
+                                            <div className="skill-name">Github</div>
+                                        </div>
+
+                                        {/* Duplicate set for seamless scrolling */}
+                                        <div className="skill-card">
+                                            <div className="skill-icon html-icon">
+                                                <i className="fab fa-html5"></i>
+                                            </div>
+                                            <div className="skill-name">HTML</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon css-icon">
+                                                <i className="fab fa-css3-alt"></i>
+                                            </div>
+                                            <div className="skill-name">CSS</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon js-icon">
+                                                <i className="fab fa-js"></i>
+                                            </div>
+                                            <div className="skill-name">JavaScript</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon java-icon">
+                                                <i className="fab fa-java"></i>
+                                            </div>
+                                            <div className="skill-name">Java</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon db-icon">
+                                                <i className="fas fa-database"></i>
+                                            </div>
+                                            <div className="skill-name">PostgreSQL</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon db-icon">
+                                                <i className="fas fa-database"></i>
+                                            </div>
+                                            <div className="skill-name">MySQL</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon api-icon">
+                                                <i className="fas fa-plug"></i>
+                                            </div>
+                                            <div className="skill-name">Postman</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon react-icon">
+                                                <i className="fab fa-react"></i>
+                                            </div>
+                                            <div className="skill-name">React</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Work Experience */}
+                    <div className='About-Me-Work-Experience'>
+                        <h1>Work Experience</h1>
+                        <div className='About-Me-Content-4-1'>
+                            <h2>Internship</h2>
+                            <p>Backend Developer Intern at ZYRIK Technologies</p>
+                            <p>2023 - Present</p>
+                            <p>Worked on various projects, focusing on backend development and database management.</p>
+                        </div>
+                    </div>
+
+                    {/* Achievements  */}
+                    <div className='About-Me-Content-5'>
+                        <h1>Achievements</h1>
+                        <div className='About-Me-Achievements-grid'>
+                            <div className='About-Me-Achievements-card'>
+                                <h2>Top 10 in Hackathon</h2>
+                                <p>Participated in a hackathon and secured a place in the top 10.</p>
+                            </div>
+                            <div className='About-Me-Achievements-card'>
+                                <h2>Top 10 in Hackathon</h2>
+                                <p>Participated in a hackathon and secured a place in the top 10.</p>
+                            </div>
+                            <div className='About-Me-Achievements-card'>
+                                <h2>Top 10 in Hackathon</h2>
+                                <p>Participated in a hackathon and secured a place in the top 10.</p>
                             </div>
                         </div>
                     </div>
