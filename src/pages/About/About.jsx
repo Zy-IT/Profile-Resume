@@ -186,51 +186,69 @@ function About() {
                                         {/* Duplicate set for seamless scrolling */}
                                         <div className="skill-card">
                                             <div className="skill-icon html-icon">
-                                                <i className="fab fa-html5"></i>
+                                                <i className="fab fa-html5"><SiHtml5 /></i>
                                             </div>
                                             <div className="skill-name">HTML</div>
                                         </div>
                                         <div className="skill-card">
                                             <div className="skill-icon css-icon">
-                                                <i className="fab fa-css3-alt"></i>
+                                                <i className="fab fa-css3-alt"><FaCss3 /></i>
                                             </div>
                                             <div className="skill-name">CSS</div>
                                         </div>
                                         <div className="skill-card">
                                             <div className="skill-icon js-icon">
-                                                <i className="fab fa-js"></i>
+                                                <i className="fab fa-js"><SiJavascript /></i>
                                             </div>
                                             <div className="skill-name">JavaScript</div>
                                         </div>
                                         <div className="skill-card">
                                             <div className="skill-icon java-icon">
-                                                <i className="fab fa-java"></i>
+                                                <i className="fab fa-java"><FaJava /></i>
                                             </div>
                                             <div className="skill-name">Java</div>
                                         </div>
                                         <div className="skill-card">
+                                            <div className="skill-icon springboot-icon">
+                                                <i className="fab fa-java"><SiSpringboot /></i>
+                                            </div>
+                                            <div className="skill-name">Springboot</div>
+                                        </div>
+                                        <div className="skill-card">
                                             <div className="skill-icon db-icon">
-                                                <i className="fas fa-database"></i>
+                                                <i className="fas fa-database"><SiPostgresql /></i>
                                             </div>
                                             <div className="skill-name">PostgreSQL</div>
                                         </div>
                                         <div className="skill-card">
                                             <div className="skill-icon db-icon">
-                                                <i className="fas fa-database"></i>
+                                                <i className="fas fa-database"><SiMysql /></i>
                                             </div>
                                             <div className="skill-name">MySQL</div>
                                         </div>
                                         <div className="skill-card">
                                             <div className="skill-icon api-icon">
-                                                <i className="fas fa-plug"></i>
+                                                <i className="fas fa-plug"><SiPostman /></i>
                                             </div>
                                             <div className="skill-name">Postman</div>
                                         </div>
                                         <div className="skill-card">
                                             <div className="skill-icon react-icon">
-                                                <i className="fab fa-react"></i>
+                                                <i className="fab fa-react"><FaReact /></i>
                                             </div>
                                             <div className="skill-name">React</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon Git-icon">
+                                                <i className="fab fa-react"><FaGitAlt /></i>
+                                            </div>
+                                            <div className="skill-name">Git</div>
+                                        </div>
+                                        <div className="skill-card">
+                                            <div className="skill-icon Github-icon">
+                                                <i className="fab fa-react"><FaGithub /></i>
+                                            </div>
+                                            <div className="skill-name">Github</div>
                                         </div>
                                     </div>
                                 </div>
