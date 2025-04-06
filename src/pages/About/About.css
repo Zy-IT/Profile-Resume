@@ -1,6 +1,13 @@
 .About-Screen {
     height: 100vh;
     position: relative;
+    background-image:
+        linear-gradient(to right, rgba(15, 15, 16, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 15, 16, 0.3) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    background-position: center center;
+    background-color: #212121;
+    animation: gridwave 8s ease-in-out infinite;
 }
 
 .About-Me-Container {
@@ -79,7 +86,7 @@
     cursor: pointer;
 }
 
-.icon {
+.aboutMeicon {
     width: 24px;
     height: 24px;
     transition: all 0.3s ease-in-out;
@@ -121,15 +128,16 @@
     margin-right: -30px;
     width: 100%;
 }
-.container {
+
+.aboutMe-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 300px;
-  }
-  
-  .container .glass {
+}
+
+.aboutMe-container .glass {
     position: absolute;
     width: 180px;
     height: 200px;
@@ -144,17 +152,15 @@
     backdrop-filter: blur(10px);
     transform: rotate(calc(var(--r) * 1deg)) translateY(calc(var(--order) * -10px));
     z-index: calc(4 - var(--order));
-  }
-  
-  /* Modified hover effect for 2x2 grid */
-  .container:hover .glass {
-    transform: rotate(0deg) translate(
-      calc((var(--col) - 0.5) * 200px),
-      calc((var(--row) - 0.5) * 220px)
-    );
-  }
-  
-  .container .glass::before {
+}
+
+/* Modified hover effect for 2x2 grid */
+.aboutMe-container:hover .glass {
+    transform: rotate(0deg) translate(calc((var(--col) - 0.5) * 200px),
+            calc((var(--row) - 0.5) * 220px));
+}
+
+.aboutMe-container .glass::before {
     content: attr(data-text);
     position: absolute;
     bottom: 0;
@@ -165,12 +171,12 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
-  
-  .container .glass svg {
+}
+
+.aboutMe-container .glass svg {
     font-size: 2.5em;
     fill: #fff;
-  } 
+}
 
 
 @keyframes shine {
@@ -213,4 +219,26 @@
     }
 
 
+}
+
+@keyframes gridWave {
+    0% {
+        background-position: 0 0;
+    }
+
+    25% {
+        background-position: 0.5rem 0;
+    }
+
+    50% {
+        background-position: 0.5rem 0.5rem;
+    }
+
+    75% {
+        background-position: 0 0.5rem;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
