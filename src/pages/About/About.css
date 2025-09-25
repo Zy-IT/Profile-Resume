@@ -182,12 +182,12 @@
     fill: #fff;
 }
 
+
 /* -----Infinite Marquee of Skills ------*/
 .About-Me-Skills-section {
     position: relative;
     margin-top: 50px;
-    height: 1000px';
-
+    height: 620px;
 }
 
 .About-Me-Skills-Title {
@@ -216,6 +216,8 @@
 .About-Me-Skills {
     width: 100%;
     padding: 40px;
+    padding-left: 0;
+    padding-right: 0;
 
 }
 
@@ -223,17 +225,35 @@
 .skills-marquee-container {
     width: 100%;
     overflow: hidden;
-    height: 300px;
-    border: 1px solid #64ffda;
+    height: 330px;
     border-radius: 20px;
+    border: #292828 1px solid;
+    transition: all 0.3s ease-in-out;
+    padding-bottom: 40px;
+}
+
+.skills-marquee-container:hover {
+    border: 2px solid #64ffda;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(100, 255, 218, 0.4), 0 0 20px rgba(100, 255, 218, 0.3);
 }
 
 .skills-marquee {
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: marquee 30s linear infinite;
-    padding-top: 60px;
+    animation: marquee 40s linear infinite;
+    padding-top: 30px;
+}
+
+.skills-marquee-2 {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee2 40s linear infinite;
+    padding-top: 40px;
+    padding-bottom: 30px;
+
 }
 
 .skills-track {
@@ -319,27 +339,229 @@
     }
 }
 
+
+@keyframes marquee2 {
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 /*----Work Experience----*/
 .About-Me-Work-Experience-Container {
-    height: 600px;
-    display : flex;
-    flex-direction: row;
-    gap: 5rem;
-    padding: 20px;
-    justify-content: center;
+    padding-top: 30px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 40px;
+    justify-content: flex-start;
     align-items: center;
-    border: 1px solid #413f3f;
+    border-radius: 25px;
+    background-color: #292828;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+}
+
+.About-Me-Work-Experience-Container:hover {
+    box-shadow: 0 10px 40px rgba(100, 255, 218, 0.4), 0 0 20px rgba(100, 255, 218, 0.3);
+    border: 1px solid #61DAFB;
 }
 
 .About-Me-Work-Experience-Header {
-    font-size: 35px;
-    color: #fff;
+    text-align: center;
+    position: relative;
+}
 
+.About-Me-Work-Experience-Header h2 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: white;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, white, white);
+    background-clip: text;
+    transition: all 0.4s ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.About-Me-Work-Experience-Header h2:hover {
+    font-size: 3rem;
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #64ffda, #61DAFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.About-Me-Work-Experience-Header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+}
+
+.About-Me-Work-Experience-Wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.About-Me-Work-Experience-Card {
+    border: 2px solid #64ffda;
+    border-radius: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.9) 0%, rgba(65, 63, 63, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.About-Me-Work-Experience-Card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+    transform: rotate(-45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.About-Me-Work-Experience-Card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(100, 255, 218, 0.4), 0 0 20px rgba(100, 255, 218, 0.3);
+    border-color: #61DAFB;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.95) 0%, rgba(65, 63, 63, 0.9) 100%);
+}
+
+.About-Me-Work-Experience-Card:hover::after {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(-45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(-45deg);
+    }
+}
+
+.About-Me-Content-4-1 {
+    position: relative;
+    z-index: 2;
+}
+
+.About-Me-Work-Position h2 {
+    font-size: 1.8rem;
+    color: #64ffda;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+
+.About-Me-Work-Position h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    transition: width 0.4s ease;
+}
+
+.About-Me-Work-Company p {
+    font-size: 1.2rem;
+    color: #61DAFB;
+    margin-bottom: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.About-Me-Work p {
+    font-size: 1rem;
+    color: #a8a8a8;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+}
+
+.About-Me-Work-Description {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.About-Me-Work-Description p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0; 
+    position: relative;
+    padding-left: 20px;
+}
+
+.About-Me-Work-Description p::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #64ffda;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* Achievements */
+.About-Me-Notable-Experience-Container {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.About-Me-Notable-Experience-Header {
+    font-size: 30px;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 60px;
 }
 
 
 
-/* Achievements */
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -355,6 +577,27 @@
 
     .skill-name {
         font-size: 0.8rem;
+    }
+
+    .About-Me-Work-Experience-Container {
+        padding: 20px;
+        gap: 2rem;
+    }
+
+    .About-Me-Work-Experience-Header h2 {
+        font-size: 2.2rem;
+    }
+
+    .About-Me-Work-Experience-Card {
+        padding: 20px;
+    }
+
+    .About-Me-Work-Position h2 {
+        font-size: 1.5rem;
+    }
+
+    .About-Me-Work-Company p {
+        font-size: 1.1rem;
     }
 }
 

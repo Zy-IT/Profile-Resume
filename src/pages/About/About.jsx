@@ -152,6 +152,31 @@ function About() {
                                         ))}
                                     </div>
                                 </div>
+                                <div className="skills-marquee-2">
+                                    {/* First set of skills */}
+                                    <div className="skills-track">
+                                        {skills.map((skill, index) => (
+                                            <div className="skill-card" key={`skill-1-${index}`}>
+                                                <div className={`skill-icon ${skill.iconClass}`}>
+                                                    {skill.icon}
+                                                </div>
+                                                <div className="skill-name">{skill.name}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Duplicate the skills to create seamless loop */}
+                                    <div className="skills-track">
+                                        {skills.map((skill, index) => (
+                                            <div className="skill-card" key={`skill-2-${index}`}>
+                                                <div className={`skill-icon ${skill.iconClass}`}>
+                                                    {skill.icon}
+                                                </div>
+                                                <div className="skill-name">{skill.name}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -164,44 +189,59 @@ function About() {
                         <div className='About-Me-Work-Experience-Wrapper'>
                             <div className='About-Me-Work-Experience-Card'>
                                 <div className='About-Me-Content-4-1'>
-                                    <h2>Internship</h2>
-                                    <p>NTC - National TeleCommunications Commision</p>
-                                    <p>Feb 2024 - May 2024</p>
-                                    <p>
-                                        Work as tech support, helping the employees regards
-                                        <br />
-                                        to their concern of Setting up thier Devices Etc.
-                                    </p>
+                                    <div className='About-Me-Work-Position'>
+                                        <h2>Internship</h2>
+                                    </div>
+                                    <div className='About-Me-Work-Company'>
+                                        <p>NTC (National TeleCommunications Commission)</p>
+                                    </div>
+                                    <div className='About-Me-Work'>
+                                        <p>Feb 2024 - May 2024</p>
+                                    </div>
+                                    <div className='About-Me-Work-Description'>
+                                        <p>
+                                            Worked as tech support, helping employees with their concerns regarding device setup, troubleshooting, and technical assistance across various departments.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+
                             <div className='About-Me-Work-Experience-Card'>
                                 <div className='About-Me-Content-4-1'>
-                                    <h2>Internship</h2>
-                                    <p>NTC - National TeleCommunications Commision</p>
-                                    <p>Feb 2024 - May 2024</p>
-                                    <p>
-                                        Work as tech support, helping the employees regards
-                                        <br />
-                                        to their concern of Setting up thier Devices Etc.
-                                    </p>
+                                    <div className='About-Me-Work-Position'>
+                                        <h2>Asst. System Administrator</h2>
+                                    </div>
+                                    <div className='About-Me-Work-Company'>
+                                        <p>RBCI (Rural Bank of Cauayan Inc.)</p>
+                                    </div>
+                                    <div className='About-Me-Work'>
+                                        <p>Nov 2024 - </p>
+                                    </div>
+                                    <div className='About-Me-Work-Description'>
+                                        <p>
+                                            Managed the Core Banking System, processing day-to-day operations, ensuring system reliability, and maintaining database integrity for seamless banking services.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Achievements  */}
-                    <div className='About-Me-Content-5'>
-                        <h1>Achievements</h1>
-                        <div className='About-Me-Achievements-grid'>
-                            <div className='About-Me-Achievements-card'>
+                    {/* Notable Experiences  */}
+                    <div className='About-Me-Notable-Experience-Container'>
+                        <div className='About-Me-Notable-Experience-Header'>
+                            <h1>Achievements</h1>
+                        </div>
+                        <div className='About-Me-Notable-Experience-grid'>
+                            <div className='About-Me-Notable-Experience-card'>
                                 <h2>Top 10 in Hackathon</h2>
                                 <p>Participated in a hackathon and secured a place in the top 10.</p>
                             </div>
-                            <div className='About-Me-Achievements-card'>
+                            <div className='About-Me-Notable-Experience-card'>
                                 <h2>Top 10 in Hackathon</h2>
                                 <p>Participated in a hackathon and secured a place in the top 10.</p>
                             </div>
-                            <div className='About-Me-Achievements-card'>
+                            <div className='About-Me-Notable-Experience-card'>
                                 <h2>Top 10 in Hackathon</h2>
                                 <p>Participated in a hackathon and secured a place in the top 10.</p>
                             </div>
