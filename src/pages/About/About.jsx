@@ -4,6 +4,7 @@ import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
 import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
 import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import './About.css';
+import ScrollAnimation from '../../Components/ScrollAnimation/ScrollAnimation';
 
 
 function About() {
@@ -122,8 +123,7 @@ function About() {
 
                     <section className='About-Me-Skills-section'>
                         <div className='About-Me-Skills-Title'>
-                            <h1>Tech</h1>
-                            <h1 className='Aboute-Me-Title-Sub'>Stacks</h1>
+                            <h1>Tech  Stacks</h1>
                         </div>
                         <div className="About-Me-Skills">
                             <div className="skills-marquee-container">
@@ -187,66 +187,159 @@ function About() {
                             <h2>Work Experience</h2>
                         </div>
                         <div className='About-Me-Work-Experience-Wrapper'>
-                            <div className='About-Me-Work-Experience-Card'>
-                                <div className='About-Me-Content-4-1'>
-                                    <div className='About-Me-Work-Position'>
-                                        <h2>Internship</h2>
-                                    </div>
-                                    <div className='About-Me-Work-Company'>
-                                        <p>NTC (National TeleCommunications Commission)</p>
-                                    </div>
-                                    <div className='About-Me-Work'>
-                                        <p>Feb 2024 - May 2024</p>
-                                    </div>
-                                    <div className='About-Me-Work-Description'>
-                                        <p>
-                                            Worked as tech support, helping employees with their concerns regarding device setup, troubleshooting, and technical assistance across various departments.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div className='About-Me-Work-Experience-Card'>
-                                <div className='About-Me-Content-4-1'>
-                                    <div className='About-Me-Work-Position'>
-                                        <h2>Asst. System Administrator</h2>
-                                    </div>
-                                    <div className='About-Me-Work-Company'>
-                                        <p>RBCI (Rural Bank of Cauayan Inc.)</p>
-                                    </div>
-                                    <div className='About-Me-Work'>
-                                        <p>Nov 2024 - </p>
-                                    </div>
-                                    <div className='About-Me-Work-Description'>
-                                        <p>
-                                            Managed the Core Banking System, processing day-to-day operations, ensuring system reliability, and maintaining database integrity for seamless banking services.
-                                        </p>
+                            <ScrollAnimation delay={0.1}>
+                                <div className='About-Me-Work-Experience-Card'>
+                                    <div className='About-Me-Content-4-1'>
+                                        <div className='About-Me-Work-Position'>
+                                            <h2>Store Staff</h2>
+                                        </div>
+                                        <div className='About-Me-Work-Company'>
+                                            <p>Local Variety Shop</p>
+                                        </div>
+                                        <div className='About-Me-Work'>
+                                            <p>Part Time</p>
+                                        </div>
+                                        <div className='About-Me-Work-Description'>
+                                            <p>
+                                                May not be Related to tech stuff and corporate purposes but it helped me train my capabilities
+                                                and enhance my comprehension skills, communication skills and Management Skills.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </ScrollAnimation>
+
+                            <ScrollAnimation delay={0.2}>
+                                <div className='About-Me-Work-Experience-Card'>
+                                    <div className='About-Me-Content-4-1'>
+                                        <div className='About-Me-Work-Position'>
+                                            <h2>Internship</h2>
+                                        </div>
+                                        <div className='About-Me-Work-Company'>
+                                            <p>NTC (National TeleCommunications Commission)</p>
+                                        </div>
+                                        <div className='About-Me-Work'>
+                                            <p>Feb 2024 - May 2024</p>
+                                        </div>
+                                        <div className='About-Me-Work-Description'>
+                                            <p>
+                                                Worked as tech support, helping employees with their concerns regarding device setup, troubleshooting, and technical assistance across various departments.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollAnimation>
+
+                            <ScrollAnimation delay={0.3}>
+                                <div className='About-Me-Work-Experience-Card'>
+                                    <div className='About-Me-Content-4-1'>
+                                        <div className='About-Me-Work-Position'>
+                                            <h2>Asst. System Administrator</h2>
+                                        </div>
+                                        <div className='About-Me-Work-Company'>
+                                            <p>RBCI (Rural Bank of Cauayan Inc.)</p>
+                                        </div>
+                                        <div className='About-Me-Work'>
+                                            <p>Nov 2024 - </p>
+                                        </div>
+                                        <div className='About-Me-Work-Description'>
+                                            <p>
+                                                Managed the Core Banking System, processing day-to-day operations, ensuring system reliability, and maintaining database integrity for seamless banking services.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ScrollAnimation>
                         </div>
                     </div>
 
-                    {/* Notable Experiences  */}
-                    <div className='About-Me-Notable-Experience-Container'>
-                        <div className='About-Me-Notable-Experience-Header'>
-                            <h1>Achievements</h1>
+                    {/* Professional Engagements */}
+                    <div className='About-Me-Professional-Engagements-Container'>
+                        <div className='About-Me-Professional-Engagements-Header'>
+                            <h1>Professional Engagements</h1>
                         </div>
-                        <div className='About-Me-Notable-Experience-grid'>
-                            <div className='About-Me-Notable-Experience-card'>
-                                <h2>Top 10 in Hackathon</h2>
-                                <p>Participated in a hackathon and secured a place in the top 10.</p>
-                            </div>
-                            <div className='About-Me-Notable-Experience-card'>
-                                <h2>Top 10 in Hackathon</h2>
-                                <p>Participated in a hackathon and secured a place in the top 10.</p>
-                            </div>
-                            <div className='About-Me-Notable-Experience-card'>
-                                <h2>Top 10 in Hackathon</h2>
-                                <p>Participated in a hackathon and secured a place in the top 10.</p>
-                            </div>
+
+                        <div className='About-Me-Professional-Engagements-grid'>
+                            <ScrollAnimation delay={0.1}>
+                                <div className='About-Me-Professional-Engagements-card'>
+                                    <div className='About-Me-Professional-Engagements-Image'>
+                                        <img src="/path/to/hackathon-image.jpg" alt="Hackathon Achievement" />
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Tag'>
+                                        <h3>🏆  Top 25 Finalist</h3>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagements-Title'>
+                                        <h2>iDeaTech Challenge 2023</h2>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Date'>
+                                        <p>
+                                            September 19-20 2023
+                                        </p>
+                                    </div>
+                                </div>
+                            </ScrollAnimation>
+
+                            <ScrollAnimation delay={0.2}>
+                                <div className='About-Me-Professional-Engagements-card'>
+                                    <div className='About-Me-Professional-Engagements-Image'>
+                                        <img src="/path/to/conference-image.jpg" alt="Conference Speaking" />
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Tag'>
+                                        <h3>🏆 National Qualifier</h3>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagements-Title'>
+                                        <h2>PCITE 2023</h2>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Date'>
+                                        <p>
+                                            November 19-20 2023
+                                        </p>
+                                    </div>
+                                </div>
+                            </ScrollAnimation>
+
+                            <ScrollAnimation delay={0.3}>
+                                <div className='About-Me-Professional-Engagements-card'>
+                                    <div className='About-Me-Professional-Engagements-Image'>
+                                        <img src="/path/to/conference-image.jpg" alt="Conference Speaking" />
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Tag'>
+                                        <h3>⭐ Officer</h3>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagements-Title'>
+                                        <h2>DSC-Lites Auditor</h2>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Date'>
+                                        <p>
+                                            2023-2024
+                                        </p>
+                                    </div>
+                                </div>
+                            </ScrollAnimation>
+
+                            <ScrollAnimation delay={0.4}>
+                                <div className='About-Me-Professional-Engagements-card'>
+                                    <div className='About-Me-Professional-Engagements-Image'>
+                                        <img src="/src/assets/DSWDEngagement.jpg" alt="Mentorship Program" />
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Tag'>
+                                        <h3>⭐ Officer Assigned</h3>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagements-Title'>
+                                        <h2>DSWD Collaboration</h2>
+                                    </div>
+                                    <div className='About-Me-Professional-Engagement-Date'>
+                                        <p>
+                                            July 13-14 2025
+                                        </p>
+                                    </div>
+                                </div>
+                            </ScrollAnimation>
+
                         </div>
                     </div>
+
                 </section>
             </div >
         </div >

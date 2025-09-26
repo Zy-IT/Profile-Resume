@@ -186,7 +186,7 @@
 /* -----Infinite Marquee of Skills ------*/
 .About-Me-Skills-section {
     position: relative;
-    margin-top: 50px;
+    margin-top: 100px;
     height: 620px;
 }
 
@@ -197,6 +197,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 20px;
+
 }
 
 .About-Me-Skills-Title h1 {
@@ -204,14 +205,22 @@
     font-size: 3.5rem;
     text-align: center;
     padding-bottom: 20px;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;
 }
 
-.Aboute-Me-Title-Sub {
-    color: #E44D26;
-    font-size: 3.5rem;
-    text-align: center;
-    padding-bottom: 20px;
+.About-Me-Skills-Title h1:hover {
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #64ffda, #61DAFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: none;
 }
+
 
 .About-Me-Skills {
     width: 100%;
@@ -352,12 +361,12 @@
 
 /*----Work Experience----*/
 .About-Me-Work-Experience-Container {
-    padding-top: 30px;
     min-height: 600px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 40px;
+    padding-bottom: 80px;
     justify-content: flex-start;
     align-items: center;
     border-radius: 25px;
@@ -367,11 +376,14 @@
     overflow: hidden;
     margin: 0 auto;
     transition: all 0.4s ease;
+    border: 1px solid #212121;
 }
 
 .About-Me-Work-Experience-Container:hover {
     box-shadow: 0 10px 40px rgba(100, 255, 218, 0.4), 0 0 20px rgba(100, 255, 218, 0.3);
     border: 1px solid #61DAFB;
+    margin: 0 auto;
+    transform: none;
 }
 
 .About-Me-Work-Experience-Header {
@@ -465,6 +477,7 @@
     0% {
         transform: translateX(-100%) translateY(-100%) rotate(-45deg);
     }
+
     100% {
         transform: translateX(100%) translateY(100%) rotate(-45deg);
     }
@@ -527,7 +540,7 @@
     font-size: 1.1rem;
     color: #e0e0e0;
     line-height: 1.6;
-    margin: 0; 
+    margin: 0;
     position: relative;
     padding-left: 20px;
 }
@@ -543,24 +556,226 @@
 }
 
 
-/* Achievements */
-.About-Me-Notable-Experience-Container {
-    height: 600px;
+/*----Professional Engagements----*/
+.About-Me-Professional-Engagements-Container {
+    padding: 40px;
+    padding-top: 100px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 3rem;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1400px;
 }
 
-.About-Me-Notable-Experience-Header {
-    font-size: 30px;
-    color: #fff;
-    padding-top: 40px;
-    padding-bottom: 60px;
+.About-Me-Professional-Engagements-Header {
+    text-align: center;
+    position: relative;
 }
 
+.About-Me-Professional-Engagements-Header h1 {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: white;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, white, white);
+    background-clip: text;
+    transition: all 0.4s ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.About-Me-Professional-Engagements-Header h1:hover {
+    font-size: 3rem;
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #64ffda, #61DAFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
+.About-Me-Professional-Engagements-Header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+}
+
+/* Grid Layout */
+.About-Me-Professional-Engagements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center;
+}
+
+/* Ensure maximum 3 columns */
+@media (min-width: 1200px) {
+    .About-Me-Professional-Engagements-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.About-Me-Professional-Engagements-card {
+    border: solid 1px #212121;
+    border-radius: 20px;
+    padding: 0;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.9) 0%, rgba(65, 63, 63, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    min-width: 300px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+}
+
+.About-Me-Professional-Engagements-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(100, 255, 218, 0.4), 0 0 20px rgba(100, 255, 218, 0.3);
+    border-color: #61DAFB;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.95) 0%, rgba(65, 63, 63, 0.9) 100%);
+}
+
+/* Image Styles - Updated */
+.About-Me-Professional-Engagements-Image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px 18px 0 0;
+}
+
+.About-Me-Professional-Engagements-Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: transform 0.4s ease;
+}
+
+.About-Me-Professional-Engagements-card:hover .About-Me-Professional-Engagements-Image img {
+    transform: scale(1.05);
+}
+
+.About-Me-Professional-Engagements-Image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 1;
+}
+
+/* Tag Styles - New positioning */
+.About-Me-Professional-Engagement-Tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(100, 255, 218, 0.9);
+    color: #0a0a0a;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.About-Me-Professional-Engagement-Tag h3 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.About-Me-Professional-Engagement-Tag:hover {
+    background: rgba(100, 255, 218, 1);
+    transform: scale(1.05);
+}
+
+.About-Me-Professional-Engagements-Title {
+    padding: 30px 30px 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.About-Me-Professional-Engagements-Title h2 {
+    font-size: 1.5rem;
+    color: #64ffda;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.About-Me-Professional-Engagements-Title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    transition: width 0.4s ease;
+}
+
+.About-Me-Professional-Engagements-card:hover .About-Me-Professional-Engagements-Title h2::after {
+    width: 100%;
+}
+
+.About-Me-Professional-Engagements-card:hover .About-Me-Professional-Engagements-Title h2 {
+    color: #61DAFB;
+}
+
+.About-Me-Professional-Engagement-Date {
+    padding: 25px;
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.About-Me-Professional-Engagement-Date p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .About-Me-Professional-Engagements-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+}
 
 
 /* Responsive adjustments */
@@ -598,6 +813,75 @@
 
     .About-Me-Work-Company p {
         font-size: 1.1rem;
+    }
+
+    .About-Me-Professional-Engagements-Container {
+        padding: 30px 20px;
+        gap: 2rem;
+    }
+
+    .About-Me-Professional-Engagements-Header h1 {
+        font-size: 2.5rem;
+    }
+
+    .About-Me-Professional-Engagements-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+    }
+
+    .About-Me-Professional-Engagements-card {
+        max-width: 100%;
+    }
+
+    .About-Me-Professional-Engagements-Image {
+        height: 150px;
+    }
+
+    .About-Me-Professional-Engagements-Title {
+        padding: 25px 25px 10px;
+    }
+
+    .About-Me-Professional-Engagement-Date {
+        padding: 0 25px 25px;
+    }
+
+    .About-Me-Professional-Engagements-Title h2 {
+        font-size: 1.3rem;
+    }
+
+    .About-Me-Professional-Engagement-Date p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .About-Me-Professional-Engagements-Container {
+        padding: 20px 15px;
+    }
+
+    .About-Me-Professional-Engagements-Header h1 {
+        font-size: 2rem;
+    }
+
+    .About-Me-Professional-Engagements-Image {
+        height: 120px;
+    }
+
+    .About-Me-Professional-Engagements-Title {
+        padding: 20px 20px 8px;
+    }
+
+    .About-Me-Professional-Engagement-Date {
+        padding: 0 20px 20px;
+    }
+
+    .About-Me-Professional-Engagements-Title h2 {
+        font-size: 1.2rem;
+    }
+
+    .About-Me-Professional-Engagement-Date p {
+        font-size: 0.85rem;
     }
 }
 

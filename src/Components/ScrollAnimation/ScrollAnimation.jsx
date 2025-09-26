@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from 'react';
 import './ScrollAnimation.css';
 
 const ScrollAnimation = ({ children, delay = 0 }) => {
@@ -8,7 +9,7 @@ const ScrollAnimation = ({ children, delay = 0 }) => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    
+
                     setTimeout(() => {
                         entry.target.classList.add('visible');
                     }, delay * 1000);
@@ -25,12 +26,13 @@ const ScrollAnimation = ({ children, delay = 0 }) => {
             observer.observe(elementRef.current);
         }
 
-        return() => {
+        return () => {
             if (elementRef.current) {
+                // eslint-disable-next-line react-hooks/exhaustive-deps
                 observer.unobserve(elementRef.current);
             }
         };
-    }, []);
+    }, [delay]);
 
     return (
         <div ref={elementRef} className="Scroll-Animation" style={{ transitionDelay: `${delay}s` }}>
