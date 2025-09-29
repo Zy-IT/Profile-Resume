@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { cn } from "../../libs/utils";
 
 export const BackgroundBeams = React.memo(({
+    // eslint-disable-next-line react/prop-types
     className
 }) => {
     const paths = [

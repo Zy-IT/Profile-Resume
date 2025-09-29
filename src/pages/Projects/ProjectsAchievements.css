@@ -1,0 +1,732 @@
+.Projects-Screen {
+    min-height: 100vh;
+    position: relative;
+}
+
+.Projects-Screen>div:first-child {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.Projects-Outer-Container {
+    position: relative;
+    z-index: 10;
+    isolation: isolate;
+}
+
+.Projects-Container {
+    position: relative;
+    z-index: 20;
+    padding: 120px 2rem 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Projects Deployed Section */
+.Projects-Deployed-Container {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Projects-Deployed-Header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.Projects-Deployed-Header h1 {
+    font-size: 4.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, white, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.Projects-Deployed-Header h1:hover {
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    background: linear-gradient(135deg, #64ffda, #61DAFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Projects-Deployed-Header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+}
+
+/* Grid Layout */
+.Projects-Deployed-Grid-Layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    justify-items: center;
+}
+
+/* Adjust to 2 columns on medium screens */
+@media (max-width: 1200px) {
+    .Projects-Deployed-Grid-Layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Project Card */
+.Projects-Deployed-Card {
+    border: 1px solid #212121;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.9) 0%, rgba(65, 63, 63, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 380px;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.Projects-Deployed-Card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+    transform: rotate(-45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.Projects-Deployed-Card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(100, 255, 218, 0.4), 0 0 20px rgba(100, 255, 218, 0.3);
+    border-color: #61DAFB;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.95) 0%, rgba(65, 63, 63, 0.9) 100%);
+}
+
+.Projects-Deployed-Card:hover::after {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(-45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(-45deg);
+    }
+}
+
+.Projects-Deployed-Card-Content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    flex: 1;
+}
+
+/* Image Container */
+.Projects-Deployed-Image-Container {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #292828 0%, #3a3838 100%);
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.Projects-Deployed-Image-Container::before {
+    content: '';
+    font-size: 4rem;
+    opacity: 0.3;
+    position: absolute;
+}
+
+.Projects-Deployed-Card:hover .Projects-Deployed-Image-Container {
+    background: linear-gradient(135deg, #312f2f 0%, #413f3f 100%);
+}
+
+/* Title Container */
+.Projects-Deployed-Title-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px 8px;
+    gap: 12px;
+}
+
+.Projects-Deployed-Title h2 {
+    font-size: 1.5rem;
+    color: #64ffda;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.Projects-Deployed-Title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    transition: width 0.4s ease;
+}
+
+.Projects-Deployed-Card:hover .Projects-Deployed-Title h2 {
+    color: #61DAFB;
+}
+
+.Projects-Deployed-Card:hover .Projects-Deployed-Title h2::after {
+    width: 100%;
+}
+
+.Projects-Deployed-Year {
+    background: rgba(100, 255, 218, 0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    transition: all 0.3s ease;
+}
+
+.Projects-Deployed-Year h3 {
+    font-size: 0.9rem;
+    color: #64ffda;
+    margin: 0;
+    font-weight: 600;
+}
+
+.Projects-Deployed-Card:hover .Projects-Deployed-Year {
+    background: rgba(100, 255, 218, 0.25);
+    border-color: #64ffda;
+    transform: scale(1.05);
+}
+
+/* Description */
+.Projects-Deployed-Description {
+    padding: 12px 24px 16px;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.Projects-Deployed-Description p {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Tech Stack Wrapper */
+.Projects-Deployed-Tech-Used-Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 24px 24px;
+}
+
+.Projects-Deployed-Tech-Container {
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    padding: 6px 14px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.Projects-Deployed-Tech-Container h4 {
+    font-size: 0.75rem;
+    color: #64ffda;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.Projects-Deployed-Tech-Container:hover {
+    background: rgba(100, 255, 218, 0.2);
+    border-color: #64ffda;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(100, 255, 218, 0.2);
+}
+
+/* Image styling */
+.Projects-Deployed-Image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.Projects-Deployed-Card:hover .Projects-Deployed-Image {
+    transform: scale(1.05);
+}
+
+/* Clickable card link styling */
+.Projects-Deployed-Card-Link {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Projects-Deployed-Card-Link:focus {
+    outline: 2px solid #64ffda;
+    outline-offset: 2px;
+}
+
+
+
+/* Project Achievements Area */
+.Projects-Achievements {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 60px 40px 40px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.Project-Achievements-Headers {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.Project-Achievements-Headers h1 {
+    font-size: 4.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, white, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.Project-Achievements-Headers h1:hover {
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    background: linear-gradient(135deg, #64ffda, #61DAFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.Project-Achievements-Headers::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    margin: 20px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+}
+
+/* Achievements Grid */
+.Projects-Achievements-Grid-Layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+/* Achievement Card */
+.Projects-Achievements-Card {
+    border: 1px solid #212121;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.9) 0%, rgba(65, 63, 63, 0.8) 100%);
+    backdrop-filter: blur(15px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    min-height: 500px;
+    max-height: 800px;
+    animation: fadeIn 0.6s ease-in;
+    display: flex;
+    flex-direction: column;
+}
+
+.Projects-Achievements-Card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(100, 255, 218, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.Projects-Achievements-Card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(100, 255, 218, 0.3), 0 0 20px rgba(100, 255, 218, 0.2);
+    border-color: #64ffda;
+    background: linear-gradient(135deg, rgba(49, 47, 47, 0.95) 0%, rgba(65, 63, 63, 0.9) 100%);
+}
+
+.Projects-Achievements-Card:hover::before {
+    opacity: 1;
+}
+
+/* Image Container - Side by side with year */
+.Project-Achievment-Image {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(135deg, #292828 0%, #3a3838 100%);
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.Project-Achievment-Image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    filter: brightness(0.9);
+}
+
+.Projects-Achievements-Card:hover .Project-Achievment-Image img {
+    transform: scale(1.08);
+    filter: brightness(1);
+}
+
+.Projects-Achievements-Card:hover .Project-Achievment-Image {
+    background: linear-gradient(135deg, #312f2f 0%, #413f3f 100%);
+}
+
+/* Title and Year Wrapper - Horizontal Layout */
+.Project-Achievement-Title-Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 30px 12px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Project-Achievement-Title h3 {
+    font-size: 1.6rem;
+    color: #64ffda;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.Project-Achievement-Title h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #64ffda, #61DAFB);
+    transition: width 0.4s ease;
+}
+
+.Projects-Achievements-Card:hover .Project-Achievement-Title h3 {
+    color: #61DAFB;
+}
+
+.Projects-Achievements-Card:hover .Project-Achievement-Title h3::after {
+    width: 100%;
+}
+
+.Project-Achievement-Year {
+    background: rgba(100, 255, 218, 0.15);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.Project-Achievement-Year h5 {
+    font-size: 1rem;
+    color: #64ffda;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.Projects-Achievements-Card:hover .Project-Achievement-Year {
+    background: rgba(100, 255, 218, 0.25);
+    border-color: #64ffda;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+/* Description */
+.Project-Description-Context {
+    padding: 12px 30px 30px;
+    flex: 1;
+}
+
+.Project-Description-Context p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.9;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .Projects-Achievements-Grid-Layout {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .Projects-Deployed-Grid-Layout {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Projects-Container {
+        padding: 100px 1rem 40px;
+    }
+
+    .Projects-Deployed-Container {
+        padding: 20px;
+        gap: 2rem;
+    }
+
+    .Projects-Deployed-Header h1 {
+        font-size: 2.5rem;
+    }
+
+    .Projects-Deployed-Grid-Layout {
+        gap: 2rem;
+    }
+
+    .Projects-Deployed-Card {
+        max-width: 100%;
+    }
+
+    .Projects-Deployed-Image-Container {
+        height: 200px;
+    }
+
+    .Projects-Deployed-Title-Container {
+        padding: 20px 25px 8px;
+        flex-wrap: wrap;
+    }
+
+    .Projects-Deployed-Title h2 {
+        font-size: 1.5rem;
+    }
+
+    .Projects-Deployed-Description {
+        padding: 12px 25px 18px;
+    }
+
+    .Projects-Deployed-Description p {
+        font-size: 0.95rem;
+    }
+
+    .Projects-Deployed-Tech-Used-Wrapper {
+        padding: 0 25px 25px;
+        gap: 8px;
+    }
+
+    .Projects-Deployed-Tech-Container h4 {
+        font-size: 0.7rem;
+    }
+
+    .Projects-Achievements {
+        padding: 40px 20px 40px;
+        margin-top: 60px;
+        gap: 2rem;
+    }
+
+    .Project-Achievements-Headers h1 {
+        font-size: 2.5rem;
+    }
+
+    .Projects-Achievements-Grid-Layout {
+        gap: 2rem;
+    }
+
+    .Projects-Achievements-Card {
+        max-width: 100%;
+    }
+
+    .Project-Achievment-Image {
+        height: 240px;
+    }
+
+    .Project-Achievement-Title-Wrapper {
+        padding: 24px 25px 10px;
+    }
+
+    .Project-Achievement-Title h3 {
+        font-size: 1.4rem;
+    }
+
+    .Project-Achievement-Year h5 {
+        font-size: 0.9rem;
+    }
+
+    .Project-Description-Context {
+        padding: 10px 25px 25px;
+    }
+
+    .Project-Description-Context p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Projects-Deployed-Header h1 {
+        font-size: 2rem;
+    }
+
+    .Projects-Deployed-Image-Container {
+        height: 180px;
+    }
+
+    .Projects-Deployed-Image-Container::before {
+        font-size: 3rem;
+    }
+
+    .Projects-Deployed-Title-Container {
+        padding: 18px 20px 6px;
+    }
+
+    .Projects-Deployed-Title h2 {
+        font-size: 1.3rem;
+    }
+
+    .Projects-Deployed-Year h3 {
+        font-size: 0.8rem;
+    }
+
+    .Projects-Deployed-Description {
+        padding: 10px 20px 15px;
+    }
+
+    .Projects-Deployed-Description p {
+        font-size: 0.9rem;
+    }
+
+    .Projects-Deployed-Tech-Used-Wrapper {
+        padding: 0 20px 20px;
+    }
+
+    .Project-Achievements-Headers h1 {
+        font-size: 2rem;
+    }
+
+    .Projects-Achievements {
+        padding: 30px 15px 30px;
+    }
+
+    .Project-Achievment-Image {
+        height: 200px;
+    }
+
+    .Project-Achievement-Title-Wrapper {
+        padding: 20px 20px 8px;
+        gap: 12px;
+    }
+
+    .Project-Achievement-Title h3 {
+        font-size: 1.2rem;
+    }
+
+    .Project-Achievement-Year {
+        padding: 8px 16px;
+    }
+
+    .Project-Achievement-Year h5 {
+        font-size: 0.85rem;
+    }
+
+    .Project-Description-Context {
+        padding: 8px 20px 20px;
+    }
+
+    .Project-Description-Context p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
