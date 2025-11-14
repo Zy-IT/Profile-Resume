@@ -1,5 +1,5 @@
 import Navbar from '../../Components/Navbar/Navbar';
-import Resume from '../../../public/pdfs/Curriculum Vitae_Paraoan.pdf';
+import Resume from '../../pdfs/Curriculum Vitae_Paraoan.pdf';
 import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
 import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
 import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
@@ -224,7 +224,8 @@ function About() {
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
-                                                Worked as tech support, helping employees with their concerns regarding device setup, troubleshooting, and technical assistance across various departments.
+                                                Worked as tech support, helping employees with their concerns regarding device setup, 
+                                                troubleshooting, and technical assistance across various departments.
                                             </p>
                                         </div>
                                     </div>
@@ -245,7 +246,10 @@ function About() {
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
-                                                Managed the Core Banking System, processing day-to-day operations, ensuring system reliability, and maintaining database integrity for seamless banking services.
+                                                Managed the Core Banking System, processing day-to-day operations, 
+                                                ensuring system reliability, and maintaining database integrity 
+                                                for seamless banking services. Also Developed In-House Systems 
+                                                for their other core banking processes.
                                             </p>
                                         </div>
                                     </div>
