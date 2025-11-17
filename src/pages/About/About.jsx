@@ -268,7 +268,7 @@ function About() {
                             <ScrollAnimation delay={0.1}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/path/to/hackathon-image.jpg" alt="Hackathon Achievement" />
+                                        <img src="/src/assets/iDeatech2023Engagements.png" alt="Hackathon Achievement" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>🏆  Top 25 Finalist</h3>
@@ -287,7 +287,7 @@ function About() {
                             <ScrollAnimation delay={0.2}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/path/to/conference-image.jpg" alt="Conference Speaking" />
+                                        <img src="/src/assets/PCITE2023.jpeg" alt="Conference Speaking" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>🏆 National Qualifier</h3>
@@ -306,7 +306,7 @@ function About() {
                             <ScrollAnimation delay={0.3}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/path/to/conference-image.jpg" alt="Conference Speaking" />
+                                        <img src="/src/assets/DSCLITES2023-2024.jpg" alt="Conference Speaking" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>⭐ Officer</h3>

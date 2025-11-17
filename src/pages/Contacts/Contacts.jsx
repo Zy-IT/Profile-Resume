@@ -23,7 +23,7 @@ function Contacts() {
                     </div>
                     <div className="Contacts-ShortMessage">
                         <p>
-                            Let&apos;s connect! Whether you have a project in mind, want to collaborate, 
+                            Let&apos;s talk! Whether you have a project in mind, want to collaborate, hire me
                             or just want to say hi—I&apos;d love to hear from you.
                         </p>
                     </div>

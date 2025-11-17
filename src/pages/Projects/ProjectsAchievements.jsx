@@ -124,7 +124,7 @@ function ProjectsAchievements() {
                             <ScrollAnimation delay={0.3}>
                                 <div className="Projects-Achievements-Card">
                                     <div className="Project-Achievment-Image">
-                                        <img src="/src/assets/.jpg" alt="Pitch Presentation Program" />
+                                        <img src="/src/assets/iDeatech2023.png" alt="Pitch Presentation Program" />
                                     </div>
 
                                     <div className="Project-Achievement-Title-Wrapper">
@@ -149,7 +149,7 @@ function ProjectsAchievements() {
                             <ScrollAnimation delay={0.4}>
                                 <div className="Projects-Achievements-Card">
                                     <div className="Project-Achievment-Image">
-                                        <img src="/src/assets/.jpg" alt="National Presentation Program" />
+                                        <img src="/src/assets/PSITE2023.png" alt="National Presentation Program" />
                                     </div>
 
                                     <div className="Project-Achievement-Title-Wrapper">
@@ -173,7 +173,7 @@ function ProjectsAchievements() {
                             <ScrollAnimation delay={0.5}>
                                 <div className="Projects-Achievements-Card">
                                     <div className="Project-Achievment-Image">
-                                        <img src="/src/assets/.jpg" alt="Mentorship Program" />
+                                        <img src="/src/assets/NC2.png" alt="Mentorship Program" />
                                     </div>
 
                                     <div className="Project-Achievement-Title-Wrapper">

@@ -48,7 +48,7 @@ function Home() {
         return (
             <div className={`Intro-Screen ${fadeOut ? 'fade-out' : ''}`}>
                 <div className="Intro-Content">
-                    <h1>Good Day Mate</h1>
+                    <h1>Good Day Visitor</h1>
                     <p>Loading...</p>
                 </div>
             </div>
