@@ -1,5 +1,5 @@
 import Navbar from '../../Components/Navbar/Navbar';
-import Resume from '../../pdfs/Curriculum Vitae_Paraoan.pdf';
+import Resume from '../../pdfs/Curriculum Vitae_Paraoan_Latest.pdf';
 import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
 import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
 import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
@@ -293,7 +293,7 @@ function About() {
                                         <h3>🏆 National Qualifier</h3>
                                     </div>
                                     <div className='About-Me-Professional-Engagements-Title'>
-                                        <h2>PCITE 2023</h2>
+                                        <h2>PSITE 2023</h2>
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Date'>
                                         <p>

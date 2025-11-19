@@ -23,7 +23,7 @@ function ProjectsAchievements() {
             description: "A modern website redesign for Rural Bank of Cauayan to ensure its up to date and Included the Loans Application also",
             image: "/src/assets/RbCauayanWebsite.jpg",
             url: "https://rbcauayan.com",
-            techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL", "CPANEL", ""]
+            techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL", "CPANEL"]
         },
         {
             id: 3,
@@ -154,7 +154,7 @@ function ProjectsAchievements() {
 
                                     <div className="Project-Achievement-Title-Wrapper">
                                         <div className="Project-Achievement-Title">
-                                            <h3>PCITE</h3>
+                                            <h3>PSITE</h3>
                                         </div>
                                         <div className="Project-Achievement-Year">
                                             <h5>2023</h5>
