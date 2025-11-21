@@ -4,6 +4,12 @@ import ScrollAnimation from "../../Components/ScrollAnimation/ScrollAnimation";
 import { BackgroundBeams } from "../../Components/UI/backgroundBeams";
 import './ProjectsAchievements.css';
 
+import rbCauayanImage from "../../assets/RbCauayanWebsite.jpg";
+import channelingImage from "../../assets/ChannelingSystem.jpg";
+import iDeatechImage from "../../assets/iDeatech2023.png";
+import psiteImage from "../../assets/PSITE2023.png";
+import nc2Image from "../../assets/NC2.png";
+
 function ProjectsAchievements() {
     // Project data array
     const projects = [
@@ -12,7 +18,7 @@ function ProjectsAchievements() {
             title: "Stay at Lease",
             year: "2023 - 2024",
             description: "A mobile application design to promote Rentable Properties",
-            image: "/path/to/stay-at-lease-image.jpg",
+            image: null,
             url: null,
             techStack: ["REACT NATIVE", "REACTJS", "EXPRESSJS", "NODEJS", "MYSQL", "AXIOS", "FIGMA", "Postman"]
         },
@@ -21,7 +27,7 @@ function ProjectsAchievements() {
             title: "RB Cauayan New Website",
             year: "2025",
             description: "A modern website redesign for Rural Bank of Cauayan to ensure its up to date and Included the Loans Application also",
-            image: "/src/assets/RbCauayanWebsite.jpg",
+            image: rbCauayanImage,
             url: "https://rbcauayan.com",
             techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL", "CPANEL"]
         },
@@ -30,9 +36,9 @@ function ProjectsAchievements() {
             title: "Chanelling System",
             year: "2025",
             description: "An Inhouse System Developed to Speed up one of their core banking process. Disclosure of Information cannot be disclose unless interviewed.",
-            image: "/src/assets/ChannelingSystem.jpg",
+            image: channelingImage,
             url: null,
-            techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL",]
+            techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL", "Task Scheduler"]
         }
     ];
 
@@ -124,7 +130,7 @@ function ProjectsAchievements() {
                             <ScrollAnimation delay={0.3}>
                                 <div className="Projects-Achievements-Card">
                                     <div className="Project-Achievment-Image">
-                                        <img src="/src/assets/iDeatech2023.png" alt="Pitch Presentation Program" />
+                                        <img src={iDeatechImage} alt="Pitch Presentation Program" />
                                     </div>
 
                                     <div className="Project-Achievement-Title-Wrapper">
@@ -149,7 +155,7 @@ function ProjectsAchievements() {
                             <ScrollAnimation delay={0.4}>
                                 <div className="Projects-Achievements-Card">
                                     <div className="Project-Achievment-Image">
-                                        <img src="/src/assets/PSITE2023.png" alt="National Presentation Program" />
+                                        <img src={psiteImage} alt="National Presentation Program" />
                                     </div>
 
                                     <div className="Project-Achievement-Title-Wrapper">
@@ -173,7 +179,7 @@ function ProjectsAchievements() {
                             <ScrollAnimation delay={0.5}>
                                 <div className="Projects-Achievements-Card">
                                     <div className="Project-Achievment-Image">
-                                        <img src="/src/assets/NC2.png" alt="Mentorship Program" />
+                                        <img src={nc2Image} alt="Mentorship Program" />
                                     </div>
 
                                     <div className="Project-Achievement-Title-Wrapper">

@@ -6,6 +6,10 @@ import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import './About.css';
 import ScrollAnimation from '../../Components/ScrollAnimation/ScrollAnimation';
 
+import iDeatechEngagement from '../../assets/iDeatech2023Engagements.png'
+import PCITE2023 from './../../assets/PCITE2023.jpeg';
+import DSCLites20232024 from '../../assets/DSCLITES2023-2024.jpg';
+import DSWDManagement from '../../assets/DSWDEngagement.jpg';
 
 function About() {
 
@@ -242,7 +246,7 @@ function About() {
                                             <p>RBCI (Rural Bank of Cauayan Inc.)</p>
                                         </div>
                                         <div className='About-Me-Work'>
-                                            <p>Nov 2024 - </p>
+                                            <p>Nov 2024 - Dec 2025</p>
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
@@ -268,7 +272,7 @@ function About() {
                             <ScrollAnimation delay={0.1}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/src/assets/iDeatech2023Engagements.png" alt="Hackathon Achievement" />
+                                        <img src={iDeatechEngagement} alt="Hackathon Achievement" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>🏆  Top 25 Finalist</h3>
@@ -287,7 +291,7 @@ function About() {
                             <ScrollAnimation delay={0.2}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/src/assets/PCITE2023.jpeg" alt="Conference Speaking" />
+                                        <img src={PCITE2023} alt="Conference Speaking" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>🏆 National Qualifier</h3>
@@ -306,7 +310,7 @@ function About() {
                             <ScrollAnimation delay={0.3}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/src/assets/DSCLITES2023-2024.jpg" alt="Conference Speaking" />
+                                        <img src={DSCLites20232024} alt="Conference Speaking" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>⭐ Officer</h3>
@@ -325,7 +329,7 @@ function About() {
                             <ScrollAnimation delay={0.4}>
                                 <div className='About-Me-Professional-Engagements-card'>
                                     <div className='About-Me-Professional-Engagements-Image'>
-                                        <img src="/src/assets/DSWDEngagement.jpg" alt="Mentorship Program" />
+                                        <img src={DSWDManagement} alt="Mentorship Program" />
                                     </div>
                                     <div className='About-Me-Professional-Engagement-Tag'>
                                         <h3>⭐ Officer Assigned</h3>
