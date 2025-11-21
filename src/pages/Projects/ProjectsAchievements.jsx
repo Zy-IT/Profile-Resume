@@ -4,6 +4,7 @@ import ScrollAnimation from "../../Components/ScrollAnimation/ScrollAnimation";
 import { BackgroundBeams } from "../../Components/UI/backgroundBeams";
 import './ProjectsAchievements.css';
 
+import StayatLeasePic from "../../assets/StayatLeasePic.jpg"
 import rbCauayanImage from "../../assets/RbCauayanWebsite.jpg";
 import channelingImage from "../../assets/ChannelingSystem.jpg";
 import iDeatechImage from "../../assets/iDeatech2023.png";
@@ -18,7 +19,7 @@ function ProjectsAchievements() {
             title: "Stay at Lease",
             year: "2023 - 2024",
             description: "A mobile application design to promote Rentable Properties",
-            image: null,
+            image: StayatLeasePic,
             url: null,
             techStack: ["REACT NATIVE", "REACTJS", "EXPRESSJS", "NODEJS", "MYSQL", "AXIOS", "FIGMA", "Postman"]
         },
