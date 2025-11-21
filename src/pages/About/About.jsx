@@ -240,7 +240,7 @@ function About() {
                                 <div className='About-Me-Work-Experience-Card'>
                                     <div className='About-Me-Content-4-1'>
                                         <div className='About-Me-Work-Position'>
-                                            <h2>Asst. System Administrator</h2>
+                                            <h2>Asst. System Administrator/Full Stack Developer</h2>
                                         </div>
                                         <div className='About-Me-Work-Company'>
                                             <p>RBCI (Rural Bank of Cauayan Inc.)</p>
