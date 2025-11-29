@@ -9,6 +9,16 @@ function Home() {
     const [showIntro, setShowIntro] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
     const [currentShine, setCurrentShine] = useState(-1);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     useEffect(() => {
         const fadeTimer = setTimeout(() => {
@@ -68,12 +78,20 @@ function Home() {
                         <div className="Home-Title">
                             <div className="Home-1-Title-Content">
                                 <h1>
-                                    <TypeWriter text="Crafting Visions  -" delay={500} speed={70} />
+                                    <TypeWriter 
+                                        text={isMobile ? "Crafting -" : "Crafting Visions  -"} 
+                                        delay={500} 
+                                        speed={isMobile ? 50 : 70} 
+                                    />
                                 </h1>
                             </div>
                             <div className="Home-2-Title-Content">
                                 <h1>
-                                    <TypeWriter text="Deploying Digital Innovations" delay={2000} speed={70} />
+                                    <TypeWriter 
+                                        text={isMobile ? "Deploying" : "Deploying Digital Innovations"} 
+                                        delay={2000} 
+                                        speed={isMobile ? 50 : 70} 
+                                    />
                                 </h1>
                             </div>
                         </div>
@@ -81,12 +99,20 @@ function Home() {
                         <div className="Home-Center">
                             <div className="Center-1-Content">
                                 <h1>
-                                    <TypeWriter text="You're Trusted" delay={3500} speed={70} />
+                                    <TypeWriter 
+                                        text="You're Trusted" 
+                                        delay={3500} 
+                                        speed={isMobile ? 50 : 70} 
+                                    />
                                 </h1>
                             </div>
                             <div className="Center-2-Content">
                                 <h1>
-                                    <TypeWriter text="Developer" delay={4700} speed={70} />
+                                    <TypeWriter 
+                                        text="Developer" 
+                                        delay={4700} 
+                                        speed={isMobile ? 50 : 70} 
+                                    />
                                 </h1>
                             </div>
                         </div>

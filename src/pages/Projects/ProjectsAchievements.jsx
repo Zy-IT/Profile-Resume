@@ -6,6 +6,7 @@ import './ProjectsAchievements.css';
 
 import StayatLeasePic from "../../assets/StayatLeasePic.jpg"
 import rbCauayanImage from "../../assets/RbCauayanWebsite.jpg";
+import loansApplication from "../../assets/LoansApplication.png"
 import channelingImage from "../../assets/ChannelingSystem.jpg";
 import iDeatechImage from "../../assets/iDeatech2023.png";
 import psiteImage from "../../assets/PSITE2023.png";
@@ -30,16 +31,25 @@ function ProjectsAchievements() {
             description: "A modern website redesign for Rural Bank of Cauayan to ensure its up to date and Included the Loans Application also",
             image: rbCauayanImage,
             url: "https://rbcauayan.com",
-            techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL", "CPANEL"]
+            techStack: ["REACTJS", "CPANEL"]
         },
         {
             id: 3,
+            title: "RB Cauayan Loans Application",
+            year: "2025",
+            description: "A basic Loan Application to submit few information when applying for a loan",
+            image: loansApplication,
+            url: "https://rbcauayan.com/ApplyLoan",
+            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRINGBOOT", "JAVA", "POSTGRESQL", "CPANEL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
+        },
+        {
+            id: 4,
             title: "Chanelling System",
             year: "2025",
             description: "An Inhouse System Developed to Speed up one of their core banking process. Disclosure of Information cannot be disclose unless interviewed.",
             image: channelingImage,
             url: null,
-            techStack: ["REACTJS", "AXIOS", "SPRINGBOOT", "JAVA", "POSTGRESQL", "Task Scheduler"]
+            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRINGBOOT", "JAVA", "POSTGRESQL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
         }
     ];
 
@@ -108,6 +118,7 @@ function ProjectsAchievements() {
                         <ScrollAnimation delay={0.1}>
                             <div className="Projects-Deployed-Header">
                                 <h1>Accomplished Projects</h1>
+                                <h3>Press to Navigate</h3>
                             </div>
                         </ScrollAnimation>
 

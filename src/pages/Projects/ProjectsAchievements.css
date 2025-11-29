@@ -79,6 +79,29 @@
     box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
 }
 
+.Projects-Deployed-Header h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, white, white);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.Projects-Deployed-Header h3:hover {
+    color: #64ffda;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    background: linear-gradient(135deg, #64ffda, #61DAFB);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 /* Grid Layout */
 .Projects-Deployed-Grid-Layout {
     display: grid;

@@ -40,9 +40,9 @@ function About() {
                             <h1>Hi, I am Zyril</h1>
                             <p>
                                 Innovative IT professional with a strong foundation in Backend Development and Database Management.
-                                A graduate of the University of Saint Louis Tuguegarao, I thrive on solving problems and
-                                delivering impactful digital solutions. Skilled in Analyzing and creating solutions, I bring ideas to life
-                                with precision and creativity.
+                                A graduate of the University of Saint Louis Tuguegarao and Previously worked at Rural Bank of Cauayan INC.(RBCI), 
+                                I thrive on solving problems and delivering impactful digital solutions. Skilled in Analyzing 
+                                and creating solutions, I bring ideas to life with precision and creativity.
                             </p>
                             <a href={Resume} target="_blank" rel="noreferrer">
                                 <button className="About-button">
