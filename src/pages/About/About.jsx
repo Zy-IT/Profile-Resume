@@ -1,5 +1,5 @@
 import Navbar from '../../Components/Navbar/Navbar';
-import Resume from '../../pdfs/Curriculum Vitae_Paraoan_Latest.pdf';
+import Resume from '../../pdfs/Curriculum Vitae_Paraoan.pdf';
 import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
 import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
 import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
