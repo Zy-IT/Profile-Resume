@@ -27,7 +27,7 @@ function Home() {
 
         const switchTimer = setTimeout(() => {
             setShowIntro(false);
-        }, 3000); // 3 seconds
+        }, 1800); // 1.8 seconds
 
         return () => {
             clearTimeout(fadeTimer);
