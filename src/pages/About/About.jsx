@@ -1,5 +1,5 @@
 import Navbar from '../../Components/Navbar/Navbar';
-import Resume from '../../pdfs/Curriculum Vitae_Paraoan.pdf';
+import Resume from '../../pdfs/Zyril_Paraoan_Resume.pdf';
 import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
 import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
 import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
@@ -76,7 +76,7 @@ function About() {
 
                                 {/* Top Middle LinkedIn */}
                                 <a
-                                    href="https://www.linkedin.com/in/zyril-paraoan-24bb8932b/  "
+                                    href="https://www.linkedin.com/in/zyril-paraoan-24bb8932b/"
                                     target="_blank"
                                     rel="noreferrer"
                                     data-text="LinkedIn"
