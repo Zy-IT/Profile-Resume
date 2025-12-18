@@ -31,7 +31,7 @@ function ProjectsAchievements() {
             description: "A modern website redesign for Rural Bank of Cauayan to ensure its up to date and Included the Loans Application also",
             image: rbCauayanImage,
             url: "https://rbcauayan.com",
-            techStack: ["REACTJS", "CPANEL"]
+            techStack: ["REACTJS", "Turbify", "Vercel"]
         },
         {
             id: 3,
