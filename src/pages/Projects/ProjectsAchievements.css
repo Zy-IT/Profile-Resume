@@ -131,7 +131,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 380px;
-    min-height: 520px;
+    min-height: 570px;
     display: flex;
     flex-direction: column;
     animation: fadeIn 0.6s ease-in;
@@ -266,9 +266,114 @@
     transform: scale(1.05);
 }
 
+/* Meta Container - Category and Status Badges */
+.Projects-Meta-Container {
+    display: flex;
+    gap: 10px;
+    padding: 8px 24px 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.Projects-Category-Badge {
+    background: rgba(97, 218, 251, 0.12);
+    border: 1px solid rgba(97, 218, 251, 0.35);
+    padding: 6px 14px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.Projects-Category-Badge span {
+    font-size: 0.8rem;
+    color: #61DAFB;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.Projects-Status-Badge {
+    padding: 6px 14px;
+    border-radius: 12px;
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+.Projects-Status-Badge span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Status Badge Variants */
+.Projects-Status-Badge.finished,
+.Projects-Status-Badge.completed,
+.Projects-Status-Badge.certified {
+    background: rgba(76, 175, 80, 0.12);
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.Projects-Status-Badge.finished span,
+.Projects-Status-Badge.completed span,
+.Projects-Status-Badge.certified span {
+    color: #4CAF50;
+}
+
+.Projects-Status-Badge.discontinued {
+    background: rgba(255, 152, 0, 0.12);
+    border-color: rgba(255, 152, 0, 0.4);
+}
+
+.Projects-Status-Badge.discontinued span {
+    color: #FF9800;
+}
+
+.Projects-Status-Badge.in-progress {
+    background: rgba(33, 150, 243, 0.12);
+    border-color: rgba(33, 150, 243, 0.4);
+}
+
+.Projects-Status-Badge.in-progress span {
+    color: #2196F3;
+}
+
+.Projects-Deployed-Card:hover .Projects-Category-Badge {
+    background: rgba(97, 218, 251, 0.2);
+    border-color: #61DAFB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(97, 218, 251, 0.2);
+}
+
+.Projects-Deployed-Card:hover .Projects-Status-Badge.finished,
+.Projects-Deployed-Card:hover .Projects-Status-Badge.completed,
+.Projects-Deployed-Card:hover .Projects-Status-Badge.certified {
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+}
+
+.Projects-Deployed-Card:hover .Projects-Status-Badge.discontinued {
+    background: rgba(255, 152, 0, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.2);
+}
+
+.Projects-Achievements-Card:hover .Projects-Category-Badge {
+    background: rgba(97, 218, 251, 0.2);
+    border-color: #61DAFB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(97, 218, 251, 0.2);
+}
+
+.Projects-Achievements-Card:hover .Projects-Status-Badge.finished,
+.Projects-Achievements-Card:hover .Projects-Status-Badge.completed,
+.Projects-Achievements-Card:hover .Projects-Status-Badge.certified {
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+}
+
 /* Description */
 .Projects-Deployed-Description {
-    padding: 12px 24px 16px;
+    padding: 0px 24px 16px;
     flex: 1;
     display: flex;
     align-items: flex-start;
@@ -416,7 +521,7 @@
     width: 100%;
     max-width: 550px;
     height: 100%;
-    min-height: 500px;
+    min-height: 540px;
     max-height: 800px;
     animation: fadeIn 0.6s ease-in;
     display: flex;
@@ -542,7 +647,7 @@
 
 /* Description */
 .Project-Description-Context {
-    padding: 12px 30px 30px;
+    padding: 0px 30px 30px;
     flex: 1;
 }
 
@@ -618,8 +723,12 @@
         font-size: 1.5rem;
     }
 
+    .Projects-Meta-Container {
+        padding: 8px 25px 12px;
+    }
+
     .Projects-Deployed-Description {
-        padding: 12px 25px 18px;
+        padding: 0px 25px 18px;
     }
 
     .Projects-Deployed-Description p {
@@ -670,7 +779,7 @@
     }
 
     .Project-Description-Context {
-        padding: 10px 25px 25px;
+        padding: 0px 25px 25px;
     }
 
     .Project-Description-Context p {
@@ -703,8 +812,23 @@
         font-size: 0.8rem;
     }
 
+    .Projects-Meta-Container {
+        padding: 8px 20px 12px;
+        gap: 8px;
+    }
+
+    .Projects-Category-Badge,
+    .Projects-Status-Badge {
+        padding: 5px 12px;
+    }
+
+    .Projects-Category-Badge span,
+    .Projects-Status-Badge span {
+        font-size: 0.75rem;
+    }
+
     .Projects-Deployed-Description {
-        padding: 10px 20px 15px;
+        padding: 0px 20px 15px;
     }
 
     .Projects-Deployed-Description p {
@@ -745,7 +869,7 @@
     }
 
     .Project-Description-Context {
-        padding: 8px 20px 20px;
+        padding: 0px 20px 20px;
     }
 
     .Project-Description-Context p {

@@ -1,7 +1,7 @@
 import Navbar from '../../Components/Navbar/Navbar';
 import Resume from '../../pdfs/Zyril_Paraoan_Resume.pdf';
 import { BackgroundBeams } from '../../Components/UI/backgroundBeams';
-import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman } from "react-icons/si";
+import { SiHtml5, SiJavascript, SiSpringboot, SiPostgresql, SiMysql, SiPostman, SiDocker } from "react-icons/si";
 import { FaCss3, FaJava, FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
 import './About.css';
 import ScrollAnimation from '../../Components/ScrollAnimation/ScrollAnimation';
@@ -24,7 +24,8 @@ function About() {
         { name: "Postman", icon: <SiPostman />, iconClass: "api-icon" },
         { name: "React", icon: <FaReact />, iconClass: "react-icon" },
         { name: "Git", icon: <FaGitAlt />, iconClass: "git-icon" },
-        { name: "Github", icon: <FaGithub />, iconClass: "github-icon" }
+        { name: "Github", icon: <FaGithub />, iconClass: "github-icon" },
+        { name: "Docker", icon: <SiDocker />, iconClass: "docker-icon" }
     ];
 
     return (
@@ -40,8 +41,8 @@ function About() {
                             <h1>Hi, I am Zyril</h1>
                             <p>
                                 Innovative IT professional with a strong foundation in Backend Development and Database Management.
-                                A graduate of the University of Saint Louis Tuguegarao and Previously worked at Rural Bank of Cauayan INC.(RBCI), 
-                                I thrive on solving problems and delivering impactful digital solutions. Skilled in Analyzing 
+                                A graduate of the University of Saint Louis Tuguegarao and Previously worked at Rural Bank of Cauayan INC.(RBCI),
+                                I thrive on solving problems and delivering impactful digital solutions. Skilled in Analyzing
                                 and creating solutions, I bring ideas to life with precision and creativity.
                             </p>
                             <a href={Resume} target="_blank" rel="noreferrer">
@@ -196,7 +197,7 @@ function About() {
                                 <div className='About-Me-Work-Experience-Card'>
                                     <div className='About-Me-Content-4-1'>
                                         <div className='About-Me-Work-Position'>
-                                            <h2>Store Staff</h2>
+                                            <h2>Store Clerk</h2>
                                         </div>
                                         <div className='About-Me-Work-Company'>
                                             <p>Local Variety Shop</p>
@@ -228,7 +229,7 @@ function About() {
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
-                                                Worked as tech support, helping employees with their concerns regarding device setup, 
+                                                Worked as tech support, helping employees with their concerns regarding device setup,
                                                 troubleshooting, and technical assistance across various departments.
                                             </p>
                                         </div>
@@ -250,10 +251,10 @@ function About() {
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
-                                                Managed the Core Banking System, processing day-to-day operations, 
-                                                ensuring system reliability, and maintaining database integrity 
-                                                for seamless banking services. Also Developed In-House Systems 
-                                                for their other core banking processes.
+                                                Managed the Enterprise Core Banking System, processing day-to-day request,
+                                                monitoring daily operations ensuring system reliability, and process backups for counter measure 
+                                                against data loss. Developed some In-House Systems also 
+                                                for automating and improving some of their core banking processes.
                                             </p>
                                         </div>
                                     </div>

@@ -8,7 +8,10 @@ import StayatLeasePic from "../../assets/StayatLeasePic.jpg"
 import rbCauayanImage from "../../assets/RbCauayanWebsite.jpg";
 import loansApplication from "../../assets/LoansApplication.png"
 import channelingImage from "../../assets/ChannelingSystem.jpg";
+import securityImplementation from "../../assets/SecurityImplementation.jpg";
+import employeeRecords from "../../assets/EmployeeRecords.png";
 import iDeatechImage from "../../assets/iDeatech2023.png";
+import imagePosting from "../../assets/ImagePosting.png";
 import psiteImage from "../../assets/PSITE2023.png";
 import nc2Image from "../../assets/NC2.png";
 
@@ -19,7 +22,9 @@ function ProjectsAchievements() {
             id: 1,
             title: "Stay at Lease",
             year: "2023 - 2024",
-            description: "A mobile application design to promote Rentable Properties",
+            category: "Capstone Project",
+            status: "Finished",
+            description: "A mobile application design to promote Rentable Properties.",
             image: StayatLeasePic,
             url: null,
             techStack: ["REACT NATIVE", "REACTJS", "EXPRESSJS", "NODEJS", "MYSQL", "AXIOS", "FIGMA", "Postman"]
@@ -28,28 +33,97 @@ function ProjectsAchievements() {
             id: 2,
             title: "RB Cauayan New Website",
             year: "2025",
-            description: "A modern website redesign for Rural Bank of Cauayan to ensure its up to date and Included the Loans Application also",
+            category: "Company Project",
+            status: "Finished",
+            description: "A modern website redesign for Rural Bank of Cauayan for better display of services and offers.",
             image: rbCauayanImage,
             url: "https://rbcauayan.com",
-            techStack: ["REACTJS", "Turbify", "Vercel"]
+            techStack: ["REACTJS", "Turbify", "cPanel", "Vercel"]
         },
         {
             id: 3,
             title: "RB Cauayan Loans Application",
             year: "2025",
-            description: "A basic Loan Application to submit few information when applying for a loan",
+            category: "Company Project",
+            status: "Finished",
+            description: "A basic Loan Application to submit few information when applying for a loan.",
             image: loansApplication,
             url: "https://rbcauayan.com/ApplyLoan",
-            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRINGBOOT", "JAVA", "POSTGRESQL", "CPANEL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
+            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "CPANEL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
         },
         {
             id: 4,
             title: "Chanelling System",
             year: "2025",
+            category: "Company Project",
+            status: "Finished",
             description: "An Inhouse System Developed to Speed up one of their core banking process. Disclosure of Information cannot be disclose unless interviewed.",
             image: channelingImage,
             url: null,
-            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRINGBOOT", "JAVA", "POSTGRESQL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
+            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
+        },
+        {
+            id: 5,
+            title: "Employee Records System",
+            year: "2025",
+            category: "Company Project",
+            status: "Discontinued",
+            description: "A In house System that is supposed to be used for a better storage of employees information but discontinued due to Outsourcing of a Employee Records/Payroll System.",
+            image: employeeRecords,
+            url: null,
+            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "Docker"]
+        },
+        {
+            id: 6,
+            title: "Security Implementation Prototype",
+            year: "2025",
+            category: "Personal Project",
+            status: "Finished",
+            description: "A Prototype Project Developed to Test Spring Security and Spring Cache. Utilized Role Based Access Control (RBAC) to control Authorization and Efficient Data Retreival Using Caching Methods.",
+            image: securityImplementation,
+            url: null,
+            techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "JPA/HIBERNATE", "Docker"]
+        },
+        {
+            id: 7,
+            title: "Image Posting Prototype",
+            year: "2025",
+            category: "Personal Project",
+            status: "Finished",
+            description: "A Prototype Project Developed to Test Image Storing using formData in the frontnend and tested entity relationships using Live Jpa/Hibernate.",
+            image: imagePosting,
+            url: null,
+            techStack: ["REACTJS", "AXIOS", "SPRING BOOT", "JAVA", "POSTGRESQL", "JPA/HIBERNATE"]
+        }
+    ];
+
+    const achievements = [
+        {
+            id: 1,
+            title: "IdeaTech Participation",
+            year: "2023",
+            category: "Pitch Presentation",
+            status: "Completed",
+            description: "Submitted the stay at lease project for pitch presentation and qualifiers for the startup systems.",
+            image: iDeatechImage
+        },
+        {
+            id: 2,
+            title: "PSITE",
+            year: "2023",
+            category: "National Presentation",
+            status: "Completed",
+            description: "Submitted the stay at lease project for national presentation and exposure latest techs that are being developed and sponsorships offered to some studies.",
+            image: psiteImage
+        },
+        {
+            id: 3,
+            title: "NC-2 Computer Servicing",
+            year: "2023",
+            category: "Certification",
+            status: "Certified",
+            description: "Participated in a Training and Exam for NC-2 Certification.",
+            image: nc2Image
         }
     ];
 
@@ -73,6 +147,16 @@ function ProjectsAchievements() {
                         <h3>{project.year}</h3>
                     </div>
                 </div>
+
+                <div className="Projects-Meta-Container">
+                    <div className="Projects-Category-Badge">
+                        <span>{project.category}</span>
+                    </div>
+                    <div className={`Projects-Status-Badge ${project.status.toLowerCase().replace(' ', '-')}`}>
+                        <span>{project.status}</span>
+                    </div>
+                </div>
+
                 <div className="Projects-Deployed-Description">
                     <p>{project.description}</p>
                 </div>
@@ -86,7 +170,6 @@ function ProjectsAchievements() {
             </div>
         );
 
-        // If URL exists, wrap in anchor tag
         if (project.url) {
             return (
                 <a
@@ -100,10 +183,41 @@ function ProjectsAchievements() {
             );
         }
 
-        // If no URL, just return the card
         return (
             <div className="Projects-Deployed-Card">
                 {cardContent}
+            </div>
+        );
+    };
+
+    const AchievementCard = ({ achievement }) => {
+        return (
+            <div className="Projects-Achievements-Card">
+                <div className="Project-Achievment-Image">
+                    <img src={achievement.image} alt={achievement.title} />
+                </div>
+
+                <div className="Project-Achievement-Title-Wrapper">
+                    <div className="Project-Achievement-Title">
+                        <h3>{achievement.title}</h3>
+                    </div>
+                    <div className="Project-Achievement-Year">
+                        <h5>{achievement.year}</h5>
+                    </div>
+                </div>
+
+                <div className="Projects-Meta-Container">
+                    <div className="Projects-Category-Badge">
+                        <span>{achievement.category}</span>
+                    </div>
+                    <div className={`Projects-Status-Badge ${achievement.status.toLowerCase().replace(' ', '-')}`}>
+                        <span>{achievement.status}</span>
+                    </div>
+                </div>
+
+                <div className="Project-Description-Context">
+                    <p>{achievement.description}</p>
+                </div>
             </div>
         );
     };
@@ -124,7 +238,7 @@ function ProjectsAchievements() {
 
                         <div className="Projects-Deployed-Grid-Layout">
                             {projects.map((project, index) => (
-                                <ScrollAnimation key={project.id} delay={0.3 + (index * 0.20)}>
+                                <ScrollAnimation key={project.id} delay={0.3 + (index * 0.15)}>
                                     <ProjectCard project={project} />
                                 </ScrollAnimation>
                             ))}
@@ -139,77 +253,11 @@ function ProjectsAchievements() {
                         </ScrollAnimation>
 
                         <div className="Projects-Achievements-Grid-Layout">
-                            <ScrollAnimation delay={0.3}>
-                                <div className="Projects-Achievements-Card">
-                                    <div className="Project-Achievment-Image">
-                                        <img src={iDeatechImage} alt="Pitch Presentation Program" />
-                                    </div>
-
-                                    <div className="Project-Achievement-Title-Wrapper">
-                                        <div className="Project-Achievement-Title">
-                                            <h3>IdeaTech Participation</h3>
-                                        </div>
-                                        <div className="Project-Achievement-Year">
-                                            <h5>2023</h5>
-                                        </div>
-                                    </div>
-
-                                    <div className="Project-Description-Context">
-                                        <p>
-                                            Submitted the stay at lease project for pitch presentation and qualifiers for the
-                                            <br />
-                                            startup systems.
-                                        </p>
-                                    </div>
-                                </div>
-                            </ScrollAnimation>
-
-                            <ScrollAnimation delay={0.4}>
-                                <div className="Projects-Achievements-Card">
-                                    <div className="Project-Achievment-Image">
-                                        <img src={psiteImage} alt="National Presentation Program" />
-                                    </div>
-
-                                    <div className="Project-Achievement-Title-Wrapper">
-                                        <div className="Project-Achievement-Title">
-                                            <h3>PSITE</h3>
-                                        </div>
-                                        <div className="Project-Achievement-Year">
-                                            <h5>2023</h5>
-                                        </div>
-                                    </div>
-
-                                    <div className="Project-Description-Context">
-                                        <p>
-                                            Submitted the stay at lease project for national presentation and exposure
-                                            latest techs that are being developed and sponsorships offered to some studies.
-                                        </p>
-                                    </div>
-                                </div>
-                            </ScrollAnimation>
-
-                            <ScrollAnimation delay={0.5}>
-                                <div className="Projects-Achievements-Card">
-                                    <div className="Project-Achievment-Image">
-                                        <img src={nc2Image} alt="Mentorship Program" />
-                                    </div>
-
-                                    <div className="Project-Achievement-Title-Wrapper">
-                                        <div className="Project-Achievement-Title">
-                                            <h3>NC-2 Computer Servicing</h3>
-                                        </div>
-                                        <div className="Project-Achievement-Year">
-                                            <h5>2023</h5>
-                                        </div>
-                                    </div>
-
-                                    <div className="Project-Description-Context">
-                                        <p>
-                                            Participated in a Training and Exam for NC-2 Certification.
-                                        </p>
-                                    </div>
-                                </div>
-                            </ScrollAnimation>
+                            {achievements.map((achievement, index) => (
+                                <ScrollAnimation key={achievement.id} delay={0.3 + (index * 0.1)}>
+                                    <AchievementCard achievement={achievement} />
+                                </ScrollAnimation>
+                            ))}
                         </div>
                     </div>
                 </div>
