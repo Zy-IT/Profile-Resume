@@ -203,7 +203,7 @@ function About() {
                                             <p>RBCI (Rural Bank of Cauayan Inc.)</p>
                                         </div>
                                         <div className='About-Me-Work'>
-                                            <p>Nov 2024 - Dec 2025</p>
+                                            <p>Nov 2024 - Present</p>
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
