@@ -197,18 +197,20 @@ function About() {
                                 <div className='About-Me-Work-Experience-Card'>
                                     <div className='About-Me-Content-4-1'>
                                         <div className='About-Me-Work-Position'>
-                                            <h2>Store Clerk</h2>
+                                            <h2>Asst. System Administrator/Full Stack Developer</h2>
                                         </div>
                                         <div className='About-Me-Work-Company'>
-                                            <p>Local Variety Shop</p>
+                                            <p>RBCI (Rural Bank of Cauayan Inc.)</p>
                                         </div>
                                         <div className='About-Me-Work'>
-                                            <p>Part Time</p>
+                                            <p>Nov 2024 - Dec 2025</p>
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
-                                                May not be Related to tech stuff and corporate purposes but it helped me train my capabilities
-                                                and enhance my comprehension skills, communication skills and Management Skills.
+                                                Managed the Enterprise Core Banking System, processing day-to-day request,
+                                                monitoring daily operations ensuring system reliability, and process backups for counter measure
+                                                against data loss. Developed some In-House Systems also
+                                                for automating and improving some of their core banking processes.
                                             </p>
                                         </div>
                                     </div>
@@ -241,20 +243,18 @@ function About() {
                                 <div className='About-Me-Work-Experience-Card'>
                                     <div className='About-Me-Content-4-1'>
                                         <div className='About-Me-Work-Position'>
-                                            <h2>Asst. System Administrator/Full Stack Developer</h2>
+                                            <h2>Store Clerk</h2>
                                         </div>
                                         <div className='About-Me-Work-Company'>
-                                            <p>RBCI (Rural Bank of Cauayan Inc.)</p>
+                                            <p>Local Variety Shop</p>
                                         </div>
                                         <div className='About-Me-Work'>
-                                            <p>Nov 2024 - Dec 2025</p>
+                                            <p>Part Time</p>
                                         </div>
                                         <div className='About-Me-Work-Description'>
                                             <p>
-                                                Managed the Enterprise Core Banking System, processing day-to-day request,
-                                                monitoring daily operations ensuring system reliability, and process backups for counter measure 
-                                                against data loss. Developed some In-House Systems also 
-                                                for automating and improving some of their core banking processes.
+                                                May not be Related to tech stuff and corporate purposes but it helped me train my capabilities
+                                                and enhance my comprehension skills, communication skills and Management Skills.
                                             </p>
                                         </div>
                                     </div>

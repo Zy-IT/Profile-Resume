@@ -18,19 +18,9 @@ import nc2Image from "../../assets/NC2.png";
 function ProjectsAchievements() {
     // Project data array
     const projects = [
+
         {
             id: 1,
-            title: "Stay at Lease",
-            year: "2023 - 2024",
-            category: "Capstone Project",
-            status: "Finished",
-            description: "A mobile application design to promote Rentable Properties.",
-            image: StayatLeasePic,
-            url: null,
-            techStack: ["REACT NATIVE", "REACTJS", "EXPRESSJS", "NODEJS", "MYSQL", "AXIOS", "FIGMA", "Postman"]
-        },
-        {
-            id: 2,
             title: "RB Cauayan New Website",
             year: "2025",
             category: "Company Project",
@@ -41,7 +31,7 @@ function ProjectsAchievements() {
             techStack: ["REACTJS", "Turbify", "cPanel", "Vercel"]
         },
         {
-            id: 3,
+            id: 2,
             title: "RB Cauayan Loans Application",
             year: "2025",
             category: "Company Project",
@@ -52,7 +42,7 @@ function ProjectsAchievements() {
             techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "CPANEL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
         },
         {
-            id: 4,
+            id: 3,
             title: "Chanelling System",
             year: "2025",
             category: "Company Project",
@@ -63,7 +53,7 @@ function ProjectsAchievements() {
             techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "WinSW", "INTERNET INFORMATION SERVICE(IIS)",]
         },
         {
-            id: 5,
+            id: 4,
             title: "Employee Records System",
             year: "2025",
             category: "Company Project",
@@ -72,6 +62,17 @@ function ProjectsAchievements() {
             image: employeeRecords,
             url: null,
             techStack: ["REACTJS", "AXIOS", "ZUSTAND", "SPRING BOOT", "JAVA", "POSTGRESQL", "Docker"]
+        },
+        {
+            id: 5,
+            title: "Stay at Lease",
+            year: "2023 - 2024",
+            category: "Capstone Project",
+            status: "Finished",
+            description: "A mobile application design to promote Rentable Properties.",
+            image: StayatLeasePic,
+            url: null,
+            techStack: ["REACT NATIVE", "REACTJS", "EXPRESSJS", "NODEJS", "MYSQL", "AXIOS", "FIGMA", "Postman"]
         },
         {
             id: 6,
